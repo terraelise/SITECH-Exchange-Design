@@ -1,21 +1,29 @@
 ﻿@import "variables.less";
 @import "mixins.less";
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Open+Sans+Condensed:700);
+
 // bootstrap overrides and theme styling
 html, body {
     position: relative;
     height: 100%;
-    background-color: @color-white;
+    background-color: @brand-blue;
     font-family: @font-standard;
     color: @brand-font;
+    font-size: 15px;
     line-height: 1.4;
-    @media @min-md {
+    @media @min-small {
         font-size: 16px;
     }
 }
+.condensed {
+    font-family: @font-condensed;
+    font-weight: 800;
+    text-transform: uppercase;
+}
 a {
     color: @brand-blue;
-    text-decoration: underline;
+    text-decoration: none;
     .transition(all @ani-duration);
     &:hover, &:focus {
         color: @brand-blue;
@@ -31,12 +39,56 @@ p {
 ol, ul {
     margin-bottom: @general-padding;
 }
+b, strong {
+    font-weight: 700;
+}
+sup, sub {
+    font-weight: 400;
+}
+.form-control {
+    padding: 6px 10px;
+    select& {
+        padding: 6px 8px;
+        &.input-sm, .form-group-sm & {
+            padding: 0 6px;
+        }
+    }
+    &.input-sm, .form-group-sm & {
+        padding: 0 8px;
+        height: 25px;
+        line-height: 25px;
+    }
+}
 textarea {
     resize: none;
 }
 .btn-brand {
+    display: inline-block;
+    padding: 0 10px;
+    border: 0;
     background-color: @brand-orange;
     color: @color-white;
+    line-height: 34px; // height of form-control
+    text-decoration: none;
+    .condensed();
+    .transition(all @ani-duration);
+    &:hover, &:focus {
+        background-color: @color-gold;
+        color: @color-white;
+    }
+    &.btn-sm, .form-group-sm & {
+        font-size: 14px;
+        line-height: 25px;
+    }
+}
+.text-reverse {
+    color: @color-white;
+    a {
+        color: @color-grey;
+        &:hover, &:focus {
+            color: @brand-orange;
+        }
+    }
 }
 
 // structure
@@ -46,8 +98,31 @@ textarea {
     min-width: 320px;
     max-width: 1054px; /* 1024 + the 30 for the padding */
 }
+section {
+    background-color: @color-white;
+}
+footer {
+    padding: (@general-padding * 2) 0;
+    border-top: 5px solid @brand-orange;
+    .condensed();
+    a {
+        display: block;
+        margin-bottom: 5px;
+        &:hover, &:focus {
+            text-decoration: none;
+        }
+        @media @min-thin {
+            display: inline-block;
+            margin-right: @general-padding;
+        }
+    }
+}
 #mainheader {
     overflow: hidden;
+    height: 90px; // .navbar-header + .navbar-top
+    @media @min-small {
+        height: 120px; // .navbar-header + .navbar-top + .navbar-bottom
+    }
 }
 .navbar {
     background-color: @color-white;
@@ -58,21 +133,69 @@ textarea {
     }
     border: 0;
     margin: 0;
+    .boxshadow(0 1px 5px 0 rgba(0,0,0,.3));
+}
+.navbar-top {
+    overflow: hidden;
+    width: 100%;
+    height: 30px;
+    padding: 2px 0;
+    font-size: 12px;
+    .btn {
+        margin-top: 3px;
+        margin-right: 10px;
+        line-height: 25px;
+        padding-bottom: 10px;
+    }
+    select {
+        max-width: 300px;
+    }
+}
+.navbar-bottom {
+    overflow: hidden;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    .condensed();
+    background-color: @brand-orange;
+    color: @color-white;
 }
 .navbar-header {
     position: relative;
     float: none;
     width: 100%;
-    border-bottom: 1px solid @color-grey;
-    background-color: #FFFFFF;
+    height: 60px;
+    border-bottom: 0;
+    background-color: @brand-blue;
+}
+.header-logo {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: @general-padding;
+    width: 110px;
+    height: 40px;
+    background-image: url("../images/header-logo.png");
+    background-size: 110px 40px;
+    background-repeat: no-repeat;
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 240dpi) {
+		background-image: url("../images/header-logo-x2.png");
+	}
+}
+.search-box {
+    margin: 13px 0 0 125px; //.header-logo width + general-padding
+    float: right;
+    max-width: 400px;
 }
 .navbar-toggle {
     position: absolute;
-    top: 10px;
+    top: 12px;
     right: 5px;
     margin: 0;
+    border: 0;
+    color: @color-grey;
     .icon-bar {
-        width: 20px;
+        width: 30px;
         margin: 0;
         background-color: @color-grey;
         .transition(all @ani-duration);
@@ -88,20 +211,50 @@ textarea {
             .transform (rotate(-45deg));
         }
     }
+    .btn-extras {
+        .opacity(0);
+        margin-right: @general-padding;
+        .transition(all @ani-duration);
+    }
     &.collapsed {
         .icon-bar {
             margin-top: 0;
             .transform (none);
             .opacity (1);
             + .icon-bar {
-                margin-top: 2px;
+                margin-top: 4px;
             }
+        }
+        .btn-extras {
+            .opacity(1);
         }
     }
     &:hover, &:focus {
+        color: @brand-orange;
         .icon-bar {
-            background-color: @brand-blue;
+            background-color: @brand-orange;
         }
+    }
+}
+#mobilenav {
+    text-align: center;
+    border: 0;
+    li {
+        border-bottom: 1px solid @color-grey;
+    }
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    .navbar-nav {
+        margin: 0 -@general-padding;
+        border: 0;
+    }
+    @media @min-small {
+        display: none !important;
+    }
+    .input-group {
+        margin: 5px;
     }
 }
 
@@ -128,21 +281,10 @@ textarea {
         .vertical-top& {
             vertical-align: top;
         }
-        .cellpadding& {
-            padding: 0 10px 10px 0;
+        &.padding-right {
+            padding-right: 10px;
         }
     }
-}
-.header-logo {
-    display: block;
-    width: 138px;
-    height: 50px;
-    background-image: url("../images/header-logo.png");
-    background-size: 138px 50px;
-    background-repeat: no-repeat;
-    @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 240dpi) {
-		background-image: url("../images/header-logo-x2.png");
-	}
 }
 
 // mini grid

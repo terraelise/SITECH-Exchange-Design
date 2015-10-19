@@ -1,3 +1,5 @@
 ﻿$(document).ready(function () {
-    //global theme jquery functions here
+    $(document).on("click", ".navbar-toggle", function() {
+	$(this).blur();
+    });
 });

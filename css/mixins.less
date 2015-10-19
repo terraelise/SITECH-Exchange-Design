@@ -3,6 +3,11 @@
     @opacityFilter: @opacityAmt * 100;
     filter: alpha(opacity=@opacityFilter);
 }
+.boxshadow(@boxshadow) {
+    -webkit-box-shadow: @boxshadow;
+    -moz-box-shadow: @boxshadow;
+    box-shadow: @boxshadow;
+}
 .transform (@transValue) {
     -ms-transform: @transValue;
     -moz-transform: @transValue;

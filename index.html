@@ -46,43 +46,84 @@
 
     <header role="banner" id="mainheader">
         <div class="navbar navbar-fixed-top">
+            <div class="navbar-top">
+                <div class="container-fluid">
+                    <a href="#" class="btn btn-brand hidden-xs pull-left">Log In</a>
+                    <a href="#" class="btn btn-brand hidden-xs pull-left">Register</a>
+                    <div class="pull-right">
+                        <div class="table-wrap">
+                            <div class="table-cell padding-right text-nowrap">YOUR SITECH DEALER:</div>
+                            <div class="table-cell">
+                                <select class="form-control input-sm">
+                                    <option>Sitech Southwest, LLC</option>
+                                    <option>Longer Business Name Appears Here For Selecting</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="navbar-header">
                 <div class="container-fluid">
                     <a href="index.html" class="header-logo"></a>
-                    <div class="search-box">
-                        <input type="text" name="searchfield" placeholder="Keyword or Model Number" />
-                        <button type="button"><span class="sprite search"></span></button>
+                    <div class="search-box input-group hidden-xs">
+                        <input type="text" class="form-control" id="searchfield" placeholder="Keyword or Model Number" />
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-brand"><span class="glyphicon glyphicon-search"></span></button>
+                        </div>
                     </div>
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar middle-bar"></span>
-                        <span class="icon-bar middle-bar"></span>
-                        <span class="icon-bar"></span>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mobilenav">
+                        <span class="btn-extras pull-left">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </span>
+                        <span class="btn-bars pull-right">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar middle-bar"></span>
+                            <span class="icon-bar middle-bar"></span>
+                            <span class="icon-bar"></span>
+                        </span>
                     </button>
                 </div>
             </div>
-            <!-- mobile-only nav -->
-            <nav id="navbar" class="navbar-collapse collapsed visible-xs-block">
+            <div class="navbar-bottom hidden-xs">
                 <div class="container-fluid">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="#">XXX</a>
-                        </li>
-                    </ul>
+                    Pre-Owned Sitech Products
                 </div>
+            </div>
+            <nav id="mobilenav" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="searchfield" placeholder="Keyword or Model Number" />
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-brand"><span class="glyphicon glyphicon-search"></span></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Log In</a>
+                    </li>
+                    <li>
+                        <a href="#">Register</a>
+                    </li>
+                </ul>
             </nav>
         </div>
     </header>
 	<section role="main">
         <div class="container-fluid">
+            page content here
         </div>
 	</section>
-	<footer role="contentinfo">
-		<div class="container-fluid">
-		</div>
-	</footer>
+    <footer role="contentinfo" class="text-reverse">
+        <div class="container-fluid">
+            <img src="images/logo-trimble-en-white.jpg" class="pull-right">
+            <a href="#">Equipment</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </footer>
 
-	<a href="#mainheader" class="btn btn-totop animate slide-in-left text-reverse">TOP</a>
 
     <script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
