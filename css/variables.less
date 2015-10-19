@@ -1,0 +1,40 @@
+﻿@brand-blue: #005596;
+@brand-orange: #fbb034;
+@brand-font: #575a5d; //body copy, subheads
+
+@color-black: #000000;
+@color-white: #FFFFFF;
+
+@color-brown: #572500; //balance brand-orange, header bars
+@color-blue: #b8cfe9; //backgrounds, grids, header bars
+@color-yellow: #ffe59d; //framing, highlighting copy
+@color-red: #bf311a; //callouts, special notes, line rules, lower level subheads
+@color-grey: #dad0ca; //charts, header bars, line strokes
+@color-gold: #d59f0f; //highlight graphical elements
+
+@font-standard: Arial,'Helvetica Neue',Helvetica,sans-serif;
+//frutiger
+
+@general-padding: 15px;
+
+@ani-duration: 300ms;
+
+//custom based on when things get a bit too thin
+@thin-min: 560px;
+@thin-max: (@thin-min - 1);
+@min-thin: ~"(min-width: @{thin-min})";
+@max-thin: ~"(max-width: @{thin-max})";
+//these are all based on bootstrap breaks
+@small-min: 768px;
+@small-max: (@small-min - 1);
+@min-small: ~"(min-width: @{small-min})";
+@max-small: ~"(max-width: @{small-max})";
+@md-min: 992px;
+@md-max: (@md-min - 1);
+@min-md: ~"(min-width: @{md-min})";
+@max-md: ~"(max-width: @{md-max})";
+@lg-min: 1200px;
+@lg-max: (@lg-min - 1);
+@min-lg: ~"(min-width: @{lg-min})";
+@max-lg: ~"(max-width: @{lg-max})";
+@min-height: ~"(min-height: 600px)";

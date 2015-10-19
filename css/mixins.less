@@ -1,0 +1,95 @@
+﻿.opacity (@opacityAmt) {
+    opacity: @opacityAmt;
+    @opacityFilter: @opacityAmt * 100;
+    filter: alpha(opacity=@opacityFilter);
+}
+.transform (@transValue) {
+    -ms-transform: @transValue;
+    -moz-transform: @transValue;
+    -webkit-transform: @transValue;
+	transform: @transValue;
+}
+.filter (@filterValue) {
+    -ms-filter: @filterValue;
+    -moz-filter: @filterValue;
+    -webkit-filter: @filterValue;
+	filter: @filterValue;
+}
+.transition (@transValue) {
+	-webkit-transition: @transValue;
+	transition: @transValue;
+}
+.aniDuration (@durValue) {
+	-webkit-animation-duration: @durValue;
+	animation-duration: @durValue;
+}
+.aniDelay (@delayValue) {
+	-webkit-animation-delay: @delayValue;
+	animation-delay: @delayValue;
+}
+.aniToFrom (@aniName, @aniStart, @aniEnd) {
+    @-webkit-keyframes ~"@{aniName}" {
+        0% {
+            @aniStart();
+	    }
+	    100% {
+		    @aniEnd();
+	    }
+    }
+    @keyframes ~"@{aniName}" {
+        0% {
+            @aniStart();
+	    }
+	    100% {
+		    @aniEnd();
+	    }
+    }
+}
+.aniToMidFromIn (@aniName, @aniStart, @aniMiddle, @aniEnd) {
+    @-webkit-keyframes ~"@{aniName}" {
+        0% {
+            @aniStart();
+	    }
+	    80% {
+		    @aniMiddle();
+	    }
+	    100% {
+		    @aniEnd();
+	    }
+    }
+    @keyframes ~"@{aniName}" {
+        0% {
+            @aniStart();
+	    }
+	    80% {
+		    @aniMiddle();
+	    }
+	    100% {
+		    @aniEnd();
+	    }
+    }
+}
+.aniToMidFromOut (@aniName, @aniStart, @aniMiddle, @aniEnd) {
+    @-webkit-keyframes ~"@{aniName}" {
+        0% {
+            @aniStart();
+	    }
+	    20% {
+		    @aniMiddle();
+	    }
+	    100% {
+		    @aniEnd();
+	    }
+    }
+    @keyframes ~"@{aniName}" {
+        0% {
+            @aniStart();
+	    }
+	    20% {
+		    @aniMiddle();
+	    }
+	    100% {
+		    @aniEnd();
+	    }
+    }
+}
