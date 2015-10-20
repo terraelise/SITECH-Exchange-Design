@@ -2,6 +2,10 @@
     $(document).on("click", ".navbar-toggle", function() {
         $(this).blur();
     });
+    $(document).on("change", ".dealer-select", function () {
+        $(this).blur();
+        triggerLoader();
+    });
     $(document).on("click", ".search-button", function () {
         $(this).blur();
         if (!$(".navbar-toggle").hasClass("collapsed")) {
