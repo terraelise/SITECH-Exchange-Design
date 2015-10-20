@@ -48,11 +48,11 @@
         <div class="navbar navbar-fixed-top">
             <div class="navbar-top">
                 <div class="container-fluid">
-                    <a href="#" class="btn btn-brand hidden-xs pull-left">Log In</a>
-                    <a href="#" class="btn btn-brand hidden-xs pull-left">Register</a>
                     <div class="pull-right">
                         <div class="table-wrap">
-                            <div class="table-cell padding-right text-nowrap">YOUR <span class="hidden-xs">SITECH</span> DEALER:</div>
+                            <div class="table-cell padding-right text-nowrap condensed hidden-xs"><a href="#">Log In</a></div>
+                            <div class="table-cell padding-right text-nowrap condensed hidden-xs"><a href="#">Register</a></div>
+                            <div class="table-cell padding-right text-nowrap condensed">YOUR <span class="hidden-xs">SITECH</span> DEALER:</div>
                             <div class="table-cell">
                                 <select class="form-control input-sm">
                                     <option>Sitech Southwest, LLC</option>
@@ -66,11 +66,15 @@
             <div class="navbar-header">
                 <div class="container-fluid">
                     <a href="index.html" class="header-logo"></a>
-                    <div class="search-box input-group hidden-xs">
-                        <input type="text" class="form-control" id="searchfield" placeholder="Keyword or Model Number" />
-                        <div class="input-group-btn">
-                            <button type="button" class="btn btn-brand"><span class="glyphicon glyphicon-search"></span></button>
-                        </div>
+                    <div class="search-box hidden-xs">
+                        <form class="search-form">
+                            <div class="input-group">
+                                <input type="text" class="form-control search-field" placeholder="Keyword or Model Number" />
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-brand search-button"><span class="glyphicon glyphicon-search"></span></button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mobilenav">
                         <span class="btn-extras pull-left">
@@ -85,20 +89,25 @@
                     </button>
                 </div>
             </div>
-            <div class="navbar-bottom hidden-xs">
+            <div class="navbar-bottom hidden-xs text-light">
                 <div class="container-fluid">
+                    <div class="pull-right">
+                        <a href="#">Home</a> / Search Products
+                    </div>
                     Pre-Owned Sitech Products
                 </div>
             </div>
             <nav id="mobilenav" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="searchfield" placeholder="Keyword or Model Number" />
-                            <div class="input-group-btn">
-                                <button type="button" class="btn btn-brand"><span class="glyphicon glyphicon-search"></span></button>
+                        <form class="search-form">
+                            <div class="input-group">
+                                <input type="text" class="form-control search-field" placeholder="Keyword or Model Number" />
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-brand search-button"><span class="glyphicon glyphicon-search"></span></button>
+                                </div>
                             </div>
-                        </div>
+                        </form>
                     </li>
                     <li>
                         <a href="#">Log In</a>
@@ -114,6 +123,7 @@
         <div class="container-fluid">
             page content here
         </div>
+        <div id="pageloader"></div>
     </section>
     <footer role="contentinfo" class="text-reverse">
         <div class="container-fluid">
@@ -123,10 +133,12 @@
             <a href="#">Contact</a>
         </div>
     </footer>
+    <div id="loader"></div>
 
 
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/spin.min.js"></script>
     <script src="js/global.js"></script>
 </body>
 </html>

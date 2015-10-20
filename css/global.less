@@ -3,6 +3,9 @@
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Open+Sans+Condensed:700);
 
+html {
+   -ms-overflow-style: scrollbar; // keep scroll bar always on so it doesn't cover actions, stupid IE
+}
 // bootstrap overrides and theme styling
 html, body {
     position: relative;
@@ -47,6 +50,7 @@ sup, sub {
 }
 .form-control {
     padding: 6px 10px;
+    .boxshadow(none);
     select& {
         padding: 6px 8px;
         &.input-sm, .form-group-sm & {
@@ -62,23 +66,25 @@ sup, sub {
 textarea {
     resize: none;
 }
-.btn-brand {
+.btn {
     display: inline-block;
     padding: 0 10px;
     border: 0;
-    background-color: @brand-orange;
-    color: @color-white;
     line-height: 34px; // height of form-control
     text-decoration: none;
     .condensed();
     .transition(all @ani-duration);
-    &:hover, &:focus {
-        background-color: @color-gold;
-        color: @color-white;
-    }
     &.btn-sm, .form-group-sm & {
         font-size: 14px;
         line-height: 25px;
+    }
+}
+.btn-brand {
+    background-color: @brand-orange;
+    color: @color-white;
+    &:hover, &:focus {
+        background-color: @color-gold;
+        color: @color-white;
     }
 }
 .text-reverse {
@@ -87,6 +93,15 @@ textarea {
         color: @color-grey;
         &:hover, &:focus {
             color: @brand-orange;
+        }
+    }
+}
+.text-light {
+    color: @color-white;
+    a {
+        color: @color-white;
+        &:hover, &:focus {
+            color: @color-yellow;
         }
     }
 }
@@ -99,18 +114,18 @@ textarea {
     max-width: 1054px; /* 1024 + the 30 for the padding */
 }
 section {
+    position: relative;
+    min-height: 500px;
     background-color: @color-white;
 }
 footer {
     padding: (@general-padding * 2) 0;
     border-top: 5px solid @brand-orange;
     .condensed();
+    font-size: 90%;
     a {
         display: block;
         margin-bottom: 5px;
-        &:hover, &:focus {
-            text-decoration: none;
-        }
         @media @min-thin {
             display: inline-block;
             margin-right: @general-padding;
@@ -119,13 +134,13 @@ footer {
 }
 #mainheader {
     overflow: hidden;
-    height: 90px; // .navbar-header + .navbar-top
+    height: 91px; // .navbar-header + .navbar-top
     @media @min-small {
-        height: 120px; // .navbar-header + .navbar-top + .navbar-bottom
+        height: 121px; // .navbar-header + .navbar-top + .navbar-bottom
     }
-}
-.navbar {
-    background-color: @color-white;
+    .navbar {
+        background-color: @brand-blue;
+    }
 }
 .navbar-fixed-top {
     @media print {
@@ -138,17 +153,19 @@ footer {
 .navbar-top {
     overflow: hidden;
     width: 100%;
-    height: 30px;
-    padding: 2px 0;
+    height: 31px;
+    padding: 3px 0;
     font-size: 12px;
-    .btn {
-        margin-top: 3px;
-        margin-right: 10px;
-        line-height: 25px;
-        padding-bottom: 10px;
+    background-color: @color-grey;
+    a {
+        padding-right: @general-padding;
     }
     select {
         max-width: 300px;
+        background-color: rgba(255,255,255,0.5);
+    }
+    .padding-right {
+        padding-top: 1px;
     }
 }
 .navbar-bottom {
@@ -158,7 +175,6 @@ footer {
     line-height: 30px;
     .condensed();
     background-color: @brand-orange;
-    color: @color-white;
 }
 .navbar-header {
     position: relative;
@@ -166,7 +182,6 @@ footer {
     width: 100%;
     height: 60px;
     border-bottom: 0;
-    background-color: @brand-blue;
 }
 .header-logo {
     display: block;
@@ -237,8 +252,9 @@ footer {
     }
 }
 #mobilenav {
-    text-align: center;
+    background-color: @color-white;
     border: 0;
+    text-align: center;
     li {
         border-bottom: 1px solid @color-grey;
     }
@@ -256,6 +272,23 @@ footer {
     .input-group {
         margin: 5px;
     }
+}
+#pageloader {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,0.5);
+}
+#loader {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 // specialty modifiers
