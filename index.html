@@ -44,7 +44,7 @@
         <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
 
-    <header role="banner" id="mainheader">
+    <header id="mainHeader" role="banner">
         <div class="navbar navbar-fixed-top">
             <div class="navbar-top">
                 <div class="container-fluid">
@@ -119,13 +119,179 @@
             </nav>
         </div>
     </header>
-    <section role="main">
+    <section id="mainContent" role="main">
         <div class="container-fluid">
-            page content here
+            <div class="content-sides">
+                <div class="content-left small">
+                    <b>Categories</b>
+                    <ul>
+                        <li><a href="#"><b>ALL</b></a></li>
+                        <li><a href="#">Machine Control</a></li>
+                        <li><a href="#">Paving Control</a></li>
+                        <li><a href="#">Site Positioning</a></li>
+                        <li><a href="#">Steering</a></li>
+                        <li><a href="#">Water Management</a></li>
+                        <li><a href="#">Flow &amp; Application</a></li>
+                        <li><a href="#">Correction</a></li>
+                        <li><a href="#">Yield Monitoring</a></li>
+                        <li><a href="#">Connected Farm</a></li>
+                        <li><a href="#">CAT&reg; Minestar&trade;</a></li>
+                    </ul>
+                    <hr />
+                    <b>Price</b>
+                    <div class="input-group">
+                        <span class="input-group-addon">$</span>
+                        <input type="text" class="form-control">
+                        <span class="input-group-addon">to $</span>
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-brand" type="button"><span class="glyphicon glyphicon-chevron-right"></span></button>
+                        </span>
+                    </div>
+                    <hr />
+                    <b>Date Listed</b>
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn" type="button"><span class="glyphicon glyphicon-calendar"></span></button>
+                        </span>
+                    </div>
+                    to
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn" type="button"><span class="glyphicon glyphicon-calendar"></span></button>
+                        </span>
+                    </div>
+                    <button class="btn btn-brand" type="button"><span class="glyphicon glyphicon-chevron-right"></span></button>
+                    <hr />
+                    <b>Industry</b>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Survey
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Construction
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Agriculture
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Mining
+                        </label>
+                    </div>
+                    <hr />
+                    <b>Classification</b>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> New
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Used
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Certified New
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Refurbished
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Parts Only
+                        </label>
+                    </div>
+                    <hr />
+                    <b>Warranty Status</b>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            All
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            Full Warranty
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                            Limited
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
+                            Expired
+                        </label>
+                    </div>
+                </div>
+                <div class="content-right">
+                    <div class="small">
+                        <p>
+                            <a href="#">All</a>
+                            <span class="text-nowrap">&gt; <a href="#">Machine Guidance</a></span>
+                            <span class="text-nowrap">&gt; <a href="#">Site Positioning</a></span>
+                            <span class="text-nowrap">&gt; Software</span>
+                        </p>
+                        <p>
+                            Price: $100 to $800 <a href="#" class="boxed"><span class="glyphicon glyphicon-remove"></span></a>
+                        </p>
+                    </div>
+                    <div class="table-wrap">
+                        <div class="table-cell padding-right hidden-sm hidden-md hidden-lg">
+                            <button type="button" class="btn btn-brand collapsed toggle-left">
+                                <span class="hidden-thin">Filter&nbsp;</span>
+                                <span class="btn-bars">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar middle-bar"></span>
+                                    <span class="icon-bar middle-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="table-cell hidden-thin text-nowrap">
+                            X,XXX results found
+                        </div>
+                        <div class="table-cell full-width">
+                            <div class="pull-right table-wrap not-full-width">
+                                <div class="table-cell padding-right padding-left hidden-thin small">
+                                    Sort:
+                                </div>
+                                <div class="table-cell">
+                                    <select class="form-control">
+                                        <option>Best Match</option>
+                                        <option>Date Listed: Newest First</option>
+                                        <option>Date Listed: Oldest First</option>
+                                        <option>Price: Lowest First</option>
+                                        <option>Price: Highest First</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="margin-top visible-thin-block">X,XXX results found</p>
+                    <hr />
+                </div>
+            </div>
         </div>
         <div id="pageloader"></div>
     </section>
-    <footer role="contentinfo" class="text-reverse">
+    <footer id="mainFooter" role="contentinfo" class="text-reverse">
         <div class="container-fluid">
             <img src="images/logo-trimble-en-white.jpg" class="pull-right">
             <a href="#">Equipment</a>

@@ -22,6 +22,11 @@
         triggerLoader();
         return false;
     });
+    $(document).on("click", ".toggle-left", function () {
+        $(this).blur();
+        $(".toggle-left").toggleClass("collapsed");
+        $(".content-sides").toggleClass("show-left"); //also need to call these when something is selected to auto close
+    });
 });
 var spinner;
 var spinnerOptions = {
