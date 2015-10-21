@@ -45,6 +45,34 @@ a.boxed:focus {
   text-decoration: none;
   background-color: #dad0ca;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 15px 0;
+  font-weight: 400;
+}
+h1 {
+  font-size: 200%;
+}
+h2 {
+  font-size: 180%;
+}
+h3 {
+  font-size: 160%;
+}
+h4 {
+  font-size: 140%;
+}
+h5 {
+  font-size: 120%;
+}
+h6 {
+  font-size: 105%;
+  font-weight: 700;
+}
 p {
   margin-bottom: 15px;
 }
@@ -133,6 +161,12 @@ textarea {
   top: 5px;
   width: 25px;
   height: 20px;
+}
+.input-group-btn:last-child .btn {
+  border-left: 1px solid #CCC;
+}
+.input-group-btn:first-child .btn {
+  border-right: 1px solid #CCC;
 }
 .btn-brand {
   background-color: #fbb034;
@@ -363,6 +397,26 @@ textarea {
 #mobilenav .input-group {
   margin: 5px;
 }
+.btn-totop {
+  position: fixed;
+  overflow: hidden;
+  right: -30px;
+  bottom: 120px;
+  /* so it doesn't sit over the footer */
+  width: 30px;
+  height: 30px;
+  min-height: 0;
+  padding: 0;
+  border-radius: 10px 0 0 10px;
+  font-size: 20px;
+  line-height: 32px;
+}
+.btn-totop .glyphicon {
+  margin: 0 auto;
+}
+.btn-totop.visible {
+  right: 0;
+}
 #mainContent {
   position: relative;
   min-height: 500px;
@@ -411,10 +465,10 @@ textarea {
   padding: 0;
 }
 .content-left ul li {
-  margin: 10px 0;
+  margin: 5px 0;
 }
 .content-left .input-group {
-  margin: 10px 0;
+  margin: 5px 0;
 }
 .content-left .input-group .input-group-addon {
   border: 0;
@@ -425,10 +479,49 @@ textarea {
 .content-left .input-group .input-group-addon:first-child {
   padding-left: 0;
 }
+.content-left .checkbox,
+.content-left .radio {
+  margin: 5px 0;
+}
 @media (min-width: 768px) {
   .content-right {
     margin-left: 230px;
   }
+}
+.search-results {
+  overflow: hidden;
+}
+@media (max-width: 579px) {
+  .search-results {
+    font-size: 80%;
+  }
+  .search-results .col-xs-3 {
+    padding-right: 0;
+  }
+}
+.pagination-wrap {
+  text-align: center;
+}
+.pagination {
+  margin: 0;
+}
+.pagination > li > a {
+  margin: 0 2px 0 0;
+  border-color: #dad0ca;
+}
+.pagination > li > a:hover,
+.pagination > li > a:focus {
+  background-color: #dad0ca;
+  border-color: #dad0ca;
+}
+.pagination > li.active > a {
+  background-color: #fbb034;
+  border-color: #fbb034;
+}
+.pagination > li.active > a:hover,
+.pagination > li.active > a:focus {
+  background-color: #fbb034;
+  border-color: #fbb034;
 }
 .table-wrap {
   display: table;

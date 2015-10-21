@@ -28,6 +28,14 @@
         $(".content-sides").toggleClass("show-left"); //also need to call these when something is selected to auto close
     });
 });
+$(window).scroll(function () {
+    var currScrollTop = $(window).scrollTop();
+    if (currScrollTop > 400) {
+        $(".btn-totop").addClass("visible"); //show to top button
+    } else {
+        $(".btn-totop").removeClass("visible"); //hide it
+    }
+});
 var spinner;
 var spinnerOptions = {
     length: 28, width: 7, radius: 30, top: "220px"

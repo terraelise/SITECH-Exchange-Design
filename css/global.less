@@ -43,6 +43,29 @@ a {
         }
     }
 }
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 @general-padding 0;
+    font-weight: 400;
+}
+h1 {
+    font-size: 200%;
+}
+h2 {
+    font-size: 180%;
+}
+h3 {
+    font-size: 160%;
+}
+h4 {
+    font-size: 140%;
+}
+h5 {
+    font-size: 120%;
+}
+h6 {
+    font-size: 105%;
+    font-weight: 700;
+}
 p {
     margin-bottom: @general-padding;
     &.margin-top {
@@ -113,6 +136,12 @@ textarea {
         top: 5px;
         width: 25px;
         height: 20px;
+    }
+    .input-group-btn:last-child & {
+        border-left: 1px solid #CCC;
+    }
+    .input-group-btn:first-child & {
+        border-right: 1px solid #CCC;
     }
 }
 .btn-brand {
@@ -311,6 +340,25 @@ textarea {
         margin: 5px;
     }
 }
+.btn-totop {
+    position: fixed;
+    overflow: hidden;
+    right: -30px;
+    bottom: 120px; /* so it doesn't sit over the footer */
+    width: 30px;
+    height: 30px;
+    min-height: 0;
+    padding: 0;
+    border-radius: 10px 0 0 10px;
+    font-size: 20px;
+    line-height: 32px;
+    .glyphicon {
+        margin: 0 auto;
+    }
+    &.visible {
+        right: 0;
+    }
+}
 
 #mainContent {
     position: relative;
@@ -355,11 +403,11 @@ textarea {
         margin: 0;
         padding: 0;
         li {
-            margin: 10px 0;
+            margin: 5px 0;
         }
     }
     .input-group {
-         margin: 10px 0;
+         margin: 5px 0;
         .input-group-addon {
             border: 0;
             padding-left: 5px;
@@ -370,6 +418,9 @@ textarea {
             }
         }
     }
+    .checkbox, .radio {
+        margin: 5px 0;
+    }
 }
 .content-right {
     @media @min-small {
@@ -377,7 +428,42 @@ textarea {
     }
 }
 
+//specialty content
+.search-results {
+    overflow: hidden;
+    @media @max-thin {
+        font-size: 80%;
+        .col-xs-3 {
+            padding-right: 0;
+        }
+    }
+}
+
 // specialty modifiers
+.pagination-wrap {
+    text-align: center;
+}
+.pagination {
+    margin: 0;
+    > li {
+        > a {
+            margin: 0 2px 0 0;
+            border-color: @color-grey;
+            &:hover, &:focus {
+                background-color: @color-grey;
+                border-color: @color-grey;
+            }
+        }
+        &.active > a {
+            background-color: @brand-orange;
+            border-color: @brand-orange;
+            &:hover, &:focus {
+                background-color: @brand-orange;
+                border-color: @brand-orange;
+            }
+        }
+    }
+}
 .table-wrap {
     display: table;
     width: 100%;
