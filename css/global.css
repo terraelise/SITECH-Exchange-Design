@@ -51,7 +51,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 15px 0;
+  margin: 0 0 5px 0;
   font-weight: 400;
 }
 h1 {
@@ -107,6 +107,9 @@ small,
 small .glyphicon,
 .small .glyphicon {
   top: 2px;
+}
+.large {
+  font-size: 110%;
 }
 .form-control {
   padding: 6px 10px;
@@ -168,6 +171,10 @@ textarea {
 .input-group-btn:first-child .btn {
   border-right: 1px solid #CCC;
 }
+.btn .badge {
+  margin-left: 10px;
+  background-color: #575a5d;
+}
 .btn-brand {
   background-color: #fbb034;
   color: #ffffff;
@@ -176,6 +183,9 @@ textarea {
 .btn-brand:focus {
   background-color: #d59f0f;
   color: #ffffff;
+}
+.btn-brand .badge {
+  background-color: #d59f0f;
 }
 .text-reverse {
   color: #ffffff;
@@ -301,6 +311,15 @@ textarea {
   margin: 13px 0 0 125px;
   float: right;
   max-width: 400px;
+}
+.search-box .search-form {
+  padding-left: 15px;
+}
+.header-cart {
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 140px;
 }
 .navbar-toggle {
   position: absolute;
@@ -495,9 +514,19 @@ textarea {
   .search-results {
     font-size: 80%;
   }
+  .search-results p {
+    margin-bottom: 8px;
+  }
   .search-results .col-xs-3 {
     padding-right: 0;
   }
+}
+.search-filters > span {
+  display: inline-block;
+  padding: 5px 10px 0 0;
+}
+.search-filters > span:last-of-type {
+  padding-right: 0;
 }
 .pagination-wrap {
   text-align: center;

@@ -44,7 +44,7 @@ a {
     }
 }
 h1, h2, h3, h4, h5, h6 {
-    margin: 0 0 @general-padding 0;
+    margin: 0 0 5px 0;
     font-weight: 400;
 }
 h1 {
@@ -92,6 +92,9 @@ small, .small {
     .glyphicon {
         top: 2px;
     }
+}
+.large {
+    font-size: 110%;
 }
 .form-control {
     padding: 6px 10px;
@@ -143,6 +146,10 @@ textarea {
     .input-group-btn:first-child & {
         border-right: 1px solid #CCC;
     }
+    .badge {
+        margin-left: 10px;
+        background-color: @brand-font;
+    }
 }
 .btn-brand {
     background-color: @brand-orange;
@@ -150,6 +157,9 @@ textarea {
     &:hover, &:focus {
         background-color: @color-gold;
         color: @color-white;
+    }
+    .badge {
+        background-color: @color-gold;
     }
 }
 .text-reverse {
@@ -261,6 +271,15 @@ textarea {
     margin: 13px 0 0 125px; //.header-logo width + general-padding
     float: right;
     max-width: 400px;
+    .search-form {
+        padding-left: @general-padding; //space to cart button
+    }
+}
+.header-cart {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 140px; //left of logo
 }
 .navbar-toggle {
     position: absolute;
@@ -433,7 +452,19 @@ textarea {
     overflow: hidden;
     @media @max-thin {
         font-size: 80%;
+        p {
+            margin-bottom: 8px;
+        }
         .col-xs-3 {
+            padding-right: 0;
+        }
+    }
+}
+.search-filters {
+    > span {
+        display: inline-block;
+        padding: 5px 10px 0 0;
+        &:last-of-type {
             padding-right: 0;
         }
     }

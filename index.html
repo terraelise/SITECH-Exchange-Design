@@ -50,9 +50,9 @@
                 <div class="container-fluid">
                     <div class="pull-right">
                         <div class="table-wrap">
-                            <div class="table-cell padding-right text-nowrap condensed hidden-xs"><a href="#">Log In</a></div>
-                            <div class="table-cell padding-right text-nowrap condensed hidden-xs"><a href="#">Register</a></div>
-                            <div class="table-cell padding-right text-nowrap condensed">YOUR <span class="hidden-xs">SITECH</span> DEALER:</div>
+                            <div class="table-cell padding-right text-nowrap condensed hidden-xs"><a href="login.html">Log In</a></div>
+                            <div class="table-cell padding-right text-nowrap condensed hidden-xs"><a href="register.html">Register</a></div>
+                            <div class="table-cell padding-right text-nowrap condensed"><span class="hidden-xs">YOUR SITECH </span>DEALER:</div>
                             <div class="table-cell">
                                 <select class="form-control input-sm dealer-select">
                                     <option>Sitech Southwest, LLC</option>
@@ -66,15 +66,23 @@
             <div class="navbar-header">
                 <div class="container-fluid">
                     <a href="index.html" class="header-logo"></a>
+                    <a href="cart.html" class="btn btn-brand header-cart visible-xs-block"><span class="glyphicon glyphicon-shopping-cart"></span><span class="badge">4</span></a>
                     <div class="search-box hidden-xs">
-                        <form class="search-form">
-                            <div class="input-group">
-                                <input type="text" class="form-control search-field" placeholder="Keyword or Model Number" />
-                                <div class="input-group-btn">
-                                    <button type="button" class="btn btn-brand search-button"><span class="glyphicon glyphicon-search"></span></button>
-                                </div>
+                        <div class="table-wrap">
+                            <div class="table-cell">
+                                <a href="cart.html" class="btn btn-brand"><span class="glyphicon glyphicon-shopping-cart"></span><span class="badge">4</span></a>
                             </div>
-                        </form>
+                            <div class="table-cell">
+                                <form class="search-form">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control search-field" placeholder="Keyword or Model Number" />
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-brand search-button"><span class="glyphicon glyphicon-search"></span></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mobilenav">
                         <span class="btn-extras pull-left">
@@ -110,10 +118,10 @@
                         </form>
                     </li>
                     <li>
-                        <a href="#">Log In</a>
+                        <a href="login.html">Log In</a>
                     </li>
                     <li>
-                        <a href="#">Register</a>
+                        <a href="register.html">Register</a>
                     </li>
                 </ul>
             </nav>
@@ -260,8 +268,9 @@
                             <span class="text-nowrap">&gt; <a href="#">Site Positioning</a></span>
                             <span class="text-nowrap">&gt; Software</span>
                         </p>
-                        <p>
-                            Price: $100 to $800 <a href="#" class="boxed"><span class="glyphicon glyphicon-remove"></span></a>
+                        <p class="search-filters">
+                            <span class="text-nowrap"><a href="#" class="boxed"><span class="glyphicon glyphicon-remove"></span></a> Search: XXXXXX</span>
+                            <span class="text-nowrap"><a href="#" class="boxed"><span class="glyphicon glyphicon-remove"></span></a> Price: $100 to $800</span>
                         </p>
                     </div>
                     <div class="table-wrap">
@@ -305,8 +314,12 @@
                                 <img src="searchresults/IMG_0663.jpg" class="img-responsive" />
                             </div>
                             <div class="col-xs-9 col-sm-8">
-                                <h5>Cat Accugrade 3D Grade Control System</h5>
+                                <h5><a href="detail.html">Cat Accugrade 3D Grade Control System</a></h5>
                                 <p>This kit includes Caterpillar two MS980C GPS receivers, Trimble CB430 control cox and SNR910 radio.</p>
+                                <p><b class="large">$X,XXX</b> <span class="small text-danger text-nowrap">(PENDING OFFER)</span></p>
+                                Listed X days ago
+                                <span class="text-nowrap">&#149; Certified Used</span>
+                                <span class="text-nowrap">&#149; <a href="#">Watch this item</a></span>
                             </div>
                         </div>
                         <hr />
@@ -317,8 +330,12 @@
                                 <img src="searchresults/IMG_1025.jpg" class="img-responsive" />
                             </div>
                             <div class="col-xs-9 col-sm-8">
-                                <h5>CAT CD550A Control Box</h5>
+                                <h5><a href="detail.html">CAT CD550A Control Box</a></h5>
                                 <p>This is a pre-owned CAT/Trimble CD550A In Cab Display with Mounting Bracket that has been tested in our authorized service department and is in great working condition.</p>
+                                <p><b class="large">$X,XXX</b></p>
+                                Listed X days ago
+                                <span class="text-nowrap">&#149; Certified Used</span>
+                                <span class="text-nowrap">&#149; <a href="#">Watch this item</a></span>
                             </div>
                         </div>
                         <hr />
@@ -329,8 +346,12 @@
                                 <img src="searchresults/IMG_0861.jpg" class="img-responsive" />
                             </div>
                             <div class="col-xs-9 col-sm-8">
-                                <h5>CAT CD550A Control Box</h5>
-                                <p>This is a pre-owned CAT/Trimble CD550A In Cab Display with Mounting Bracket that has been tested in our authorized service department and is in great working condition.</p>
+                                <h5><a href="detail.html">Trimble 5800 RTK GPS Receiver with 430-450 MHz radio</a></h5>
+                                <p>Trimble 5800 RTK GPS Receiver with 430-450 MHz radio</p>
+                                <p><b class="large">$X,XXX</b></p>
+                                Listed X days ago
+                                <span class="text-nowrap">&#149; Used</span>
+                                <span class="text-nowrap">&#149; <a href="#">Watch this item</a></span>
                             </div>
                         </div>
                         <hr />
@@ -341,8 +362,12 @@
                                 <img src="searchresults/IMG_1714.jpg" class="img-responsive" />
                             </div>
                             <div class="col-xs-9 col-sm-8">
-                                <h5>CAT CD550A Control Box</h5>
-                                <p>This is a pre-owned CAT/Trimble CD550A In Cab Display with Mounting Bracket that has been tested in our authorized service department and is in great working condition.</p>
+                                <h5><a href="detail.html">Trimble Base and Rover GNSS RTK Kit w/ TSC2</a></h5>
+                                <p>Trimble Base and Rover 450-470 Kit w/ TSC2 SCS900</p>
+                                <p><b class="large">$X,XXX</b></p>
+                                Listed X days ago
+                                <span class="text-nowrap">&#149; Certified Used</span>
+                                <span class="text-nowrap">&#149; <a href="#">Watch this item</a></span>
                             </div>
                         </div>
                         <hr />
@@ -367,9 +392,11 @@
     <footer id="mainFooter" role="contentinfo" class="text-reverse">
         <div class="container-fluid">
             <img src="images/logo-trimble-en-white.jpg" class="pull-right">
-            <a href="#">Equipment</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+            <a href="index.html">Equipment</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="terms.html">Terms &amp; Conditions</a>
+            <a href="privacy.html">Privacy Policy</a>
         </div>
     </footer>
     <a href="#mainHeader" class="btn btn-totop"><span class="glyphicon glyphicon-chevron-up"></span></a>
