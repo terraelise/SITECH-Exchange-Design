@@ -89,12 +89,21 @@ sup, sub {
 }
 small, .small {
     font-size: 90%;
-    .glyphicon {
-        top: 2px;
-    }
 }
 .large {
     font-size: 110%;
+}
+.xlarge {
+    font-size: 150%;
+}
+.text-info {
+    color: @color-brown;
+}
+.text-danger {
+    color: @color-red;
+}
+.text-warning {
+    color: @color-gold;
 }
 .form-control {
     padding: 6px 10px;
@@ -150,6 +159,9 @@ textarea {
         margin-left: 10px;
         background-color: @brand-font;
     }
+    p & {
+        margin: 5px 5px 0 0;
+    }
 }
 .btn-brand {
     background-color: @brand-orange;
@@ -199,6 +211,12 @@ textarea {
         @media @min-thin {
             display: inline-block;
             margin-right: @general-padding;
+        }
+    }
+    @media @max-thin {
+        .pull-right {
+            float: none !important;
+            margin-bottom: 10px;
         }
     }
 }
@@ -525,10 +543,38 @@ textarea {
         }
     }
 }
+.float-wrap {
+    overflow: hidden;
+}
 
 // mini grid
 .visible-thin-block, .visible-thin-inline, .visible-thin-inline-block {
     display: none;
+}
+@media @min-thin {
+    .pull-right-sm {
+        float: right;
+        margin-left: @general-padding;
+    }
+    .pull-left-sm {
+        float: left;
+        margin-right: @general-padding;
+    }
+}
+@media @min-small {
+    .pull-right-md {
+        float: right;
+        margin-left: @general-padding;
+    }
+    .pull-left-md {
+        float: left;
+        margin-right: @general-padding;
+    }
+}
+@media @max-small {
+    .col-xs-12 + .col-xs-12 {
+        padding-top: (@general-padding * 2);
+    }
 }
 @media @max-thin {
     .hidden-thin {
@@ -545,6 +591,9 @@ textarea {
     }
     .col-thin-12 {
         width: 100%;
+        + col-thin-12 {
+            padding-top: (@general-padding * 2);
+        }
     }
     .col-thin-6 {
         float: left;

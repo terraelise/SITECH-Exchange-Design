@@ -104,12 +104,20 @@ small,
 .small {
   font-size: 90%;
 }
-small .glyphicon,
-.small .glyphicon {
-  top: 2px;
-}
 .large {
   font-size: 110%;
+}
+.xlarge {
+  font-size: 150%;
+}
+.text-info {
+  color: #572500;
+}
+.text-danger {
+  color: #bf311a;
+}
+.text-warning {
+  color: #d59f0f;
 }
 .form-control {
   padding: 6px 10px;
@@ -175,6 +183,9 @@ textarea {
   margin-left: 10px;
   background-color: #575a5d;
 }
+p .btn {
+  margin: 5px 5px 0 0;
+}
 .btn-brand {
   background-color: #fbb034;
   color: #ffffff;
@@ -230,6 +241,12 @@ textarea {
   #mainFooter a {
     display: inline-block;
     margin-right: 15px;
+  }
+}
+@media (max-width: 579px) {
+  #mainFooter .pull-right {
+    float: none !important;
+    margin-bottom: 10px;
   }
 }
 #mainHeader {
@@ -582,10 +599,38 @@ textarea {
 .table-wrap .table-cell.padding-left {
   padding-left: 10px;
 }
+.float-wrap {
+  overflow: hidden;
+}
 .visible-thin-block,
 .visible-thin-inline,
 .visible-thin-inline-block {
   display: none;
+}
+@media (min-width: 580px) {
+  .pull-right-sm {
+    float: right;
+    margin-left: 15px;
+  }
+  .pull-left-sm {
+    float: left;
+    margin-right: 15px;
+  }
+}
+@media (min-width: 768px) {
+  .pull-right-md {
+    float: right;
+    margin-left: 15px;
+  }
+  .pull-left-md {
+    float: left;
+    margin-right: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .col-xs-12 + .col-xs-12 {
+    padding-top: 30px;
+  }
 }
 @media (max-width: 579px) {
   .hidden-thin {
@@ -602,6 +647,9 @@ textarea {
   }
   .col-thin-12 {
     width: 100%;
+  }
+  .col-thin-12 + col-thin-12 {
+    padding-top: 30px;
   }
   .col-thin-6 {
     float: left;
