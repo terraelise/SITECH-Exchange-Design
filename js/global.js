@@ -12,6 +12,9 @@
             $(".navbar-toggle").trigger("click");
         }
         triggerLoader();
+        setTimeout(function () {
+            document.location = "search-results.html";
+        }, 3000);
     });
     $(document).on("submit", ".search-form", function (e) {
         $(".search-field").blur();
@@ -20,6 +23,9 @@
         }
         e.preventDefault();
         triggerLoader();
+        setTimeout(function () {
+            document.location = "search-results.html";
+        }, 3000);
         return false;
     });
     $(document).on("click", ".toggle-left", function () {

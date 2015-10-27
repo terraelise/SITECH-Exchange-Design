@@ -99,6 +99,9 @@
             </div>
             <div class="navbar-bottom hidden-xs text-light">
                 <div class="container-fluid">
+                    <div class="pull-right">
+                        <a href="index.html">Home</a> / Search Products
+                    </div>
                     Pre-Owned Sitech Products
                 </div>
             </div>
@@ -130,6 +133,7 @@
                 <div class="content-left small">
                     <b>Categories</b>
                     <ul>
+                        <li><a href="search-results.html"><b>ALL</b></a></li>
                         <li><a href="search-results.html">Machine Control</a></li>
                         <li><a href="search-results.html">Paving Control</a></li>
                         <li><a href="search-results.html">Site Positioning</a></li>
@@ -257,85 +261,128 @@
                     </div>
                 </div>
                 <div class="content-right">
-                    <div class="hidden-sm hidden-md hidden-lg">
-                        <div class="table-wrap">
-                            <div class="table-cell padding-right">
-                                <button type="button" class="btn btn-brand collapsed toggle-left">
-                                    Search Filters&nbsp;
-                                    <span class="btn-bars">
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar middle-bar"></span>
-                                        <span class="icon-bar middle-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </span>
-                                </button>
+                    <div class="small">
+                        <p>
+                            <a href="search-results.html">All</a>
+                            <span class="text-nowrap">&gt; <a href="search-results.html">Machine Guidance</a></span>
+                            <span class="text-nowrap">&gt; <a href="search-results.html">Site Positioning</a></span>
+                            <span class="text-nowrap">&gt; Software</span>
+                        </p>
+                        <p class="search-filters">
+                            <span class="text-nowrap"><a href="search-results.html" class="boxed"><span class="glyphicon glyphicon-remove"></span></a> Search: XXXXXX</span>
+                            <span class="text-nowrap"><a href="search-results.html" class="boxed"><span class="glyphicon glyphicon-remove"></span></a> Price: $100 to $800</span>
+                        </p>
+                    </div>
+                    <div class="table-wrap">
+                        <div class="table-cell padding-right hidden-sm hidden-md hidden-lg">
+                            <button type="button" class="btn btn-brand collapsed toggle-left">
+                                Filter&nbsp;
+                                <span class="btn-bars">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar middle-bar"></span>
+                                    <span class="icon-bar middle-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="table-cell hidden-thin text-nowrap">
+                            X,XXX results found
+                        </div>
+                        <div class="table-cell full-width">
+                            <div class="pull-right table-wrap not-full-width">
+                                <div class="table-cell padding-right padding-left hidden-thin small">
+                                    Sort:
+                                </div>
+                                <div class="table-cell">
+                                    <select class="form-control">
+                                        <option>Best Match</option>
+                                        <option>Date Listed: Newest First</option>
+                                        <option>Date Listed: Oldest First</option>
+                                        <option>Price: Lowest First</option>
+                                        <option>Price: Highest First</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="margin-top visible-thin-block">X,XXX results found</p>
+                    <hr />
+                    <div class="search-results">
+                        <!-- for each result -->
+                        <div class="row">
+                            <div class="col-xs-3 col-sm-4">
+                                <a href="detail.html"><img src="searchresults/IMG_0663.jpg" class="img-responsive" /></a>
+                            </div>
+                            <div class="col-xs-9 col-sm-8">
+                                <h5><a href="detail.html">Cat Accugrade 3D Grade Control System</a></h5>
+                                <p>This kit includes Caterpillar two MS980C GPS receivers, Trimble CB430 control cox and SNR910 radio.</p>
+                                <p><b class="large">$X,XXX</b> <span class="small text-danger text-nowrap">(PENDING OFFER)</span></p>
+                                Listed X days ago
+                                <span class="text-nowrap">&#149; Certified Used</span>
+                                <span class="text-nowrap">&#149; <a href="#">Watch this item</a></span>
                             </div>
                         </div>
                         <hr />
-                    </div>
-                    <h2>Welcome Title</h2>
-                    <p>Mauris diam lorem, porttitor eget lectus vitae, commodo posuere lectus. Nulla in est iaculis, consequat lectus eu, lobortis ligula. Phasellus lobortis turpis enim, eget congue est pretium vel. Integer eu orci a libero ullamcorper ullamcorper sed sed nibh. Mauris ultrices eros vel nisl vehicula laoreet. Curabitur et eros faucibus, ullamcorper nisl sed, volutpat libero. Duis lobortis sem velit, et pellentesque odio interdum ac. Morbi non fringilla velit.</p>
-                    <div class="row icon-list text-center">
-                        <div class="col-thin-6 col-xs-4 col-sm-3 col-md-2">
-                            <a href="search-results.html"><span><img src="images/cat-icon-temp.png" class="img-responsive" /></span> Machine Control</a>
-                        </div>
-                        <div class="col-thin-6 col-xs-4 col-sm-3 col-md-2">
-                            <a href="search-results.html"><span><img src="images/cat-icon-temp.png" class="img-responsive" /></span> Paving Control</a>
-                        </div>
-                        <div class="col-thin-6 col-xs-4 col-sm-3 col-md-2">
-                            <a href="search-results.html"><span><img src="images/cat-icon-temp.png" class="img-responsive" /></span> Site Positioning</a>
-                        </div>
-                        <div class="col-thin-6 col-xs-4 col-sm-3 col-md-2">
-                            <a href="search-results.html"><span><img src="images/cat-icon-temp.png" class="img-responsive" /></span> Steering</a>
-                        </div>
-                        <div class="col-thin-6 col-xs-4 col-sm-3 col-md-2">
-                            <a href="search-results.html"><span><img src="images/cat-icon-temp.png" class="img-responsive" /></span> Water Management</a>
-                        </div>
-                        <div class="col-thin-6 col-xs-4 col-sm-3 col-md-2">
-                            <a href="search-results.html"><span><img src="images/cat-icon-temp.png" class="img-responsive" /></span> Flow &amp; Application</a>
-                        </div>
-                    </div>
-                    <br />
-                    <div class="featured-listing text-center">
-                        <h4 class="text-reverse text-uppercase">Featured Listings</h4>
+                        <!-- end for each -->
+                        <!-- for each result -->
                         <div class="row">
-                            <!-- for each result -->
-                            <div class="col-thin-6 col-xs-6 col-sm-6 col-md-3">
-                                <div class="featured-content">
-                                    <a href="detail.html" class="featured-image" style="background-image:url('searchresults/IMG_0663.jpg');"></a>
-                                    <div class="table-wrap"><a href="detail.html" class="table-cell">Cat Accugrade 3D Grade Control System</a></div>
-                                    <div class="featured-price"><b class="large">$X,XXX</b></div>
-                                </div>
+                            <div class="col-xs-3 col-sm-4">
+                                <a href="detail.html"><img src="searchresults/IMG_1025.jpg" class="img-responsive" /></a>
                             </div>
-                            <!-- end for each -->
-                            <!-- for each result -->
-                            <div class="col-thin-6 col-xs-6 col-sm-6 col-md-3">
-                                <div class="featured-content">
-                                    <a href="detail.html" class="featured-image" style="background-image:url('searchresults/IMG_1025.jpg');"></a>
-                                    <div class="table-wrap"><a href="detail.html" class="table-cell">CAT CD550A Control Box</a></div>
-                                    <div class="featured-price"><b class="large">$X,XXX</b></div>
-                                </div>
+                            <div class="col-xs-9 col-sm-8">
+                                <h5><a href="detail.html">CAT CD550A Control Box</a></h5>
+                                <p>This is a pre-owned CAT/Trimble CD550A In Cab Display with Mounting Bracket that has been tested in our authorized service department and is in great working condition.</p>
+                                <p><b class="large">$X,XXX</b></p>
+                                Listed X days ago
+                                <span class="text-nowrap">&#149; Certified Used</span>
+                                <span class="text-nowrap">&#149; <a href="#">Watch this item</a></span>
                             </div>
-                            <!-- end for each -->
-                            <!-- for each result -->
-                            <div class="col-thin-6 col-xs-6 col-sm-6 col-md-3">
-                                <div class="featured-content">
-                                    <a href="detail.html" class="featured-image" style="background-image:url('searchresults/IMG_0861.jpg');"></a>
-                                    <div class="table-wrap"><a href="detail.html" class="table-cell">Trimble 5800 RTK GPS Receiver with 430-450 MHz radio</a></div>
-                                    <div class="featured-price"><b class="large">$X,XXX</b></div>
-                                </div>
-                            </div>
-                            <!-- end for each -->
-                            <!-- for each result -->
-                            <div class="col-thin-6 col-xs-6 col-sm-6 col-md-3">
-                                <div class="featured-content">
-                                    <a href="detail.html" class="featured-image" style="background-image:url('searchresults/IMG_1714.jpg');"></a>
-                                    <div class="table-wrap"><a href="detail.html" class="table-cell">Trimble Base and Rover GNSS RTK Kit w/ TSC2</a></div>
-                                    <div class="featured-price"><b class="large">$X,XXX</b></div>
-                                </div>
-                            </div>
-                            <!-- end for each -->
                         </div>
+                        <hr />
+                        <!-- end for each -->
+                        <!-- for each result -->
+                        <div class="row">
+                            <div class="col-xs-3 col-sm-4">
+                                <a href="detail.html"><img src="searchresults/IMG_0861.jpg" class="img-responsive" /></a>
+                            </div>
+                            <div class="col-xs-9 col-sm-8">
+                                <h5><a href="detail.html">Trimble 5800 RTK GPS Receiver with 430-450 MHz radio</a></h5>
+                                <p>Trimble 5800 RTK GPS Receiver with 430-450 MHz radio</p>
+                                <p><b class="large">$X,XXX</b></p>
+                                Listed X days ago
+                                <span class="text-nowrap">&#149; Used</span>
+                                <span class="text-nowrap">&#149; <a href="#">Watch this item</a></span>
+                            </div>
+                        </div>
+                        <hr />
+                        <!-- end for each -->
+                        <!-- for each result -->
+                        <div class="row">
+                            <div class="col-xs-3 col-sm-4">
+                                <a href="detail.html"><img src="searchresults/IMG_1714.jpg" class="img-responsive" /></a>
+                            </div>
+                            <div class="col-xs-9 col-sm-8">
+                                <h5><a href="detail.html">Trimble Base and Rover GNSS RTK Kit w/ TSC2</a></h5>
+                                <p>Trimble Base and Rover 450-470 Kit w/ TSC2 SCS900</p>
+                                <p><b class="large">$X,XXX</b></p>
+                                Listed X days ago
+                                <span class="text-nowrap">&#149; Certified Used</span>
+                                <span class="text-nowrap">&#149; <a href="#">Watch this item</a></span>
+                            </div>
+                        </div>
+                        <hr />
+                        <!-- end for each -->
+                        <nav class="pagination-wrap">
+                            <ul class="pagination pagination-sm">
+                                <li class="disabled"><a href="search-results.html" aria-label="Previous"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span></a></li>
+                                <li class="active"><a href="search-results.html">1 <span class="sr-only">(current)</span></a></li>
+                                <li><a href="search-results.html">2</a></li>
+                                <li><a href="search-results.html">3</a></li>
+                                <li><a href="search-results.html">4</a></li>
+                                <li><a href="search-results.html">5</a></li>
+                                <li><a href="search-results.html" aria-label="Next"><span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></a></li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>

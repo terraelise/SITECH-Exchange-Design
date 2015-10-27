@@ -460,6 +460,7 @@ textarea {
     }
 }
 .content-right {
+    overflow: hidden;
     @media @min-small {
         margin-left: @left-width + (@general-padding*2);
     }
@@ -467,7 +468,6 @@ textarea {
 
 //specialty content
 .search-results {
-    overflow: hidden;
     @media @max-thin {
         font-size: 80%;
         p {
@@ -484,6 +484,69 @@ textarea {
         padding: 5px 10px 0 0;
         &:last-of-type {
             padding-right: 0;
+        }
+    }
+}
+
+.featured-listing {
+    padding: @general-padding (@general-padding * 2) @general-padding @general-padding;
+    background-color: @brand-blue;
+    > .row > div {
+        margin-top: @general-padding;
+        padding-right: 0;
+    }
+    .featured-content {
+        background-color: @color-white;
+    }
+    .table-wrap {
+        height: 120px; //if title is too long it will be taller than it's neighbor, this height is a best guess to fit most
+    }
+    .table-cell {
+        padding: 0 10px;
+    }
+    .featured-image {
+        display: block;
+        height: 120px;
+        border-bottom: 1px solid @brand-blue;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    .featured-price {
+        padding: 5px;
+        background-color: @color-grey;
+        border-top: 1px solid @brand-blue;
+    }
+    @media @max-thin {
+        font-size: 85%;
+    }
+}
+
+.icon-list {
+    a {
+        display: block;
+        height: 140px;
+        padding: 10px;
+        border: 1px solid @color-white;
+        font-size: 90%;
+        span {
+            display: block;
+            height: 60px;
+            margin-bottom: 10px;
+            .opacity(0.8);
+            .transition(all @ani-duration);
+            img {
+                max-height: 100%;
+                margin: 0 auto;
+            }
+        }
+        &:hover, &:focus {
+            border-color: @brand-blue;
+            color: @color-brown;
+            text-decoration: none;
+            span {
+                .opacity(1);
+            }
         }
     }
 }
@@ -571,9 +634,35 @@ textarea {
         margin-right: @general-padding;
     }
 }
-@media @max-small {
+@media @max-md and @min-small {
+    .col-sm-6:nth-child(odd) {
+        clear: both;
+    }
+    .col-sm-4:nth-child(4n) {
+        clear: both;
+    }
+    .col-sm-3:nth-child(5n) {
+        clear: both;
+    }
+    .col-sm-2:nth-child(7n) {
+        clear: both;
+    }
+}
+@media @max-small and @min-thin {
     .col-xs-12 + .col-xs-12 {
         padding-top: (@general-padding * 2);
+    }
+    .col-xs-6:nth-child(odd) {
+        clear: both;
+    }
+    .col-xs-4:nth-child(4n) {
+        clear: both;
+    }
+    .col-xs-3:nth-child(5n) {
+        clear: both;
+    }
+    .col-xs-2:nth-child(7n) {
+        clear: both;
     }
 }
 @media @max-thin {
@@ -598,5 +687,8 @@ textarea {
     .col-thin-6 {
         float: left;
         width: 50%;
+        &:nth-child(odd) {
+            clear: both;
+        }
     }
 }
