@@ -6,6 +6,10 @@
         $(this).blur();
         triggerLoader();
     });
+    $(document).on("click", "[data-temploader]", function () {
+        $(this).blur();
+        triggerLoader();
+    });
     $(document).on("click", ".search-button", function () {
         $(this).blur();
         if (!$(".navbar-toggle").hasClass("collapsed")) {

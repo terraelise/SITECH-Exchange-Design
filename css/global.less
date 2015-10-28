@@ -24,6 +24,11 @@ html, body {
     font-weight: 800;
     text-transform: uppercase;
 }
+.glyphicon {
+    vertical-align: middle;
+    top: -0.1em;
+    .transition(all @ani-duration);
+}
 a {
     color: @brand-blue;
     text-decoration: none;
@@ -34,9 +39,11 @@ a {
     }
     &.boxed {
         display: inline-block;
+        vertical-align: middle;
         padding: 3px 7px;
         background-color: lighten(@color-grey,10%);
         border-radius: 2px;
+        white-space: nowrap;
         &:hover, &:focus {
             text-decoration: none;
             background-color: @color-grey;
@@ -94,7 +101,7 @@ small, .small {
     font-size: 110%;
 }
 .xlarge {
-    font-size: 150%;
+    font-size: 160%;
 }
 .text-info {
     color: @color-brown;
@@ -172,6 +179,16 @@ textarea {
     }
     .badge {
         background-color: @color-gold;
+    }
+}
+a, .btn {
+    &:hover, &:focus {
+        .glyphicon-chevron-right {
+            .transform(translateX(3px));
+        }
+        .glyphicon-chevron-left {
+            .transform(translateX(-3px));
+        }
     }
 }
 .text-reverse {
@@ -399,6 +416,8 @@ textarea {
 
 #mainContent {
     position: relative;
+    overflow: hidden;
+    min-width: 320px;
     min-height: 500px;
     padding: (@general-padding*2) 0;
     background-color: @color-white;
@@ -483,6 +502,15 @@ textarea {
         display: inline-block;
         padding: 5px 10px 0 0;
         &:last-of-type {
+            padding-right: 0;
+        }
+    }
+}
+
+.cart-list {
+    @media @max-thin {
+        font-size: 90%;
+        .col-xs-3 {
             padding-right: 0;
         }
     }
@@ -623,6 +651,9 @@ textarea {
         float: left;
         margin-right: @general-padding;
     }
+    .text-right-sm {
+        text-align: right;
+    }
 }
 @media @min-small {
     .pull-right-md {
@@ -632,6 +663,9 @@ textarea {
     .pull-left-md {
         float: left;
         margin-right: @general-padding;
+    }
+    .text-right-md {
+        text-align: right;
     }
 }
 @media @max-md and @min-small {
@@ -649,9 +683,6 @@ textarea {
     }
 }
 @media @max-small and @min-thin {
-    .col-xs-12 + .col-xs-12 {
-        padding-top: (@general-padding * 2);
-    }
     .col-xs-6:nth-child(odd) {
         clear: both;
     }
@@ -680,9 +711,6 @@ textarea {
     }
     .col-thin-12 {
         width: 100%;
-        + col-thin-12 {
-            padding-top: (@general-padding * 2);
-        }
     }
     .col-thin-6 {
         float: left;

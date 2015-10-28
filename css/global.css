@@ -23,6 +23,12 @@ body {
   font-weight: 800;
   text-transform: uppercase;
 }
+.glyphicon {
+  vertical-align: middle;
+  top: -0.1em;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
 a {
   color: #005596;
   text-decoration: none;
@@ -36,9 +42,11 @@ a:focus {
 }
 a.boxed {
   display: inline-block;
+  vertical-align: middle;
   padding: 3px 7px;
   background-color: #efebe8;
   border-radius: 2px;
+  white-space: nowrap;
 }
 a.boxed:hover,
 a.boxed:focus {
@@ -108,7 +116,7 @@ small,
   font-size: 110%;
 }
 .xlarge {
-  font-size: 150%;
+  font-size: 160%;
 }
 .text-info {
   color: #572500;
@@ -197,6 +205,24 @@ p .btn {
 }
 .btn-brand .badge {
   background-color: #d59f0f;
+}
+a:hover .glyphicon-chevron-right,
+.btn:hover .glyphicon-chevron-right,
+a:focus .glyphicon-chevron-right,
+.btn:focus .glyphicon-chevron-right {
+  -ms-transform: translateX(3px);
+  -moz-transform: translateX(3px);
+  -webkit-transform: translateX(3px);
+  transform: translateX(3px);
+}
+a:hover .glyphicon-chevron-left,
+.btn:hover .glyphicon-chevron-left,
+a:focus .glyphicon-chevron-left,
+.btn:focus .glyphicon-chevron-left {
+  -ms-transform: translateX(-3px);
+  -moz-transform: translateX(-3px);
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
 }
 .text-reverse {
   color: #ffffff;
@@ -455,6 +481,8 @@ p .btn {
 }
 #mainContent {
   position: relative;
+  overflow: hidden;
+  min-width: 320px;
   min-height: 500px;
   padding: 30px 0;
   background-color: #ffffff;
@@ -544,6 +572,14 @@ p .btn {
 }
 .search-filters > span:last-of-type {
   padding-right: 0;
+}
+@media (max-width: 579px) {
+  .cart-list {
+    font-size: 90%;
+  }
+  .cart-list .col-xs-3 {
+    padding-right: 0;
+  }
 }
 .featured-listing {
   padding: 15px 30px 15px 15px;
@@ -682,6 +718,9 @@ p .btn {
     float: left;
     margin-right: 15px;
   }
+  .text-right-sm {
+    text-align: right;
+  }
 }
 @media (min-width: 768px) {
   .pull-right-md {
@@ -691,6 +730,9 @@ p .btn {
   .pull-left-md {
     float: left;
     margin-right: 15px;
+  }
+  .text-right-md {
+    text-align: right;
   }
 }
 @media (max-width: 991px) and (min-width: 768px) {
@@ -708,9 +750,6 @@ p .btn {
   }
 }
 @media (max-width: 767px) and (min-width: 580px) {
-  .col-xs-12 + .col-xs-12 {
-    padding-top: 30px;
-  }
   .col-xs-6:nth-child(odd) {
     clear: both;
   }
@@ -739,9 +778,6 @@ p .btn {
   }
   .col-thin-12 {
     width: 100%;
-  }
-  .col-thin-12 + col-thin-12 {
-    padding-top: 30px;
   }
   .col-thin-6 {
     float: left;
