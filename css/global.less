@@ -53,6 +53,9 @@ a {
 h1, h2, h3, h4, h5, h6 {
     margin: 0 0 5px 0;
     font-weight: 400;
+    + p, + div {
+        margin-top: @general-padding;
+    }
 }
 h1 {
     font-size: 200%;
@@ -112,6 +115,11 @@ small, .small {
 .text-warning {
     color: @color-gold;
 }
+label {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 85%;
+}
 .form-control {
     padding: 6px 10px;
     .boxshadow(none);
@@ -125,6 +133,9 @@ small, .small {
         padding: 0 8px;
         height: 25px;
         line-height: 25px;
+    }
+    &.not-full-width {
+        width: auto;
     }
 }
 textarea {

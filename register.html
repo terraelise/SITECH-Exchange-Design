@@ -129,7 +129,92 @@
     </header>
     <section id="mainContent" role="main">
         <div class="container-fluid">
-            Placeholder: Registration
+            <h1>Customer Registration</h1>
+            <p>Mauris diam lorem, porttitor eget lectus vitae, commodo posuere lectus. Nulla in est iaculis, consequat lectus eu, lobortis ligula. Phasellus lobortis turpis enim, eget congue est pretium vel. Integer eu orci a libero ullamcorper ullamcorper sed sed nibh. Mauris ultrices eros vel nisl vehicula laoreet. Curabitur et eros faucibus, ullamcorper nisl sed, volutpat libero. Duis lobortis sem velit, et pellentesque odio interdum ac. Morbi non fringilla velit.</p>
+            <p class="small">All fields marked with <span class="text-danger">*</span> are required. Thank you!</p>
+            <hr />
+            <form>
+                <h3>Contact Details</h3>
+                <div class="form-group">
+                    <label for="regOrganization">Organization Name<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="regOrganization">
+                </div>
+                <div class="row">
+                    <div class="form-group col-thin-12 col-xs-6">
+                        <label for="regFirst">First Name<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="regFirst">
+                    </div>
+                    <div class="form-group col-thin-12 col-xs-6">
+                        <label for="regLast">Last Name<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="regLast">
+                    </div>
+                    <div class="form-group col-thin-12 col-xs-6">
+                        <label for="regEmail">Email<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="regEmail">
+                    </div>
+                    <div class="form-group col-thin-12 col-xs-6">
+                        <label for="regDepartment">Department</label>
+                        <input type="text" class="form-control" id="regDepartment">
+                    </div>
+                    <div class="form-group col-thin-12 col-xs-6">
+                        <label for="regTitle">Title</label>
+                        <input type="text" class="form-control" id="regTitle">
+                    </div>
+                    <div class="form-group col-thin-12 col-xs-6">
+                        <label for="regWebsite">Website</label>
+                        <input type="text" class="form-control" id="regWebsite">
+                    </div>
+                </div>
+                <hr />
+                <h3>Mailing Address</h3>
+                <div class="row">
+                    <div class="form-group col-thin-12 col-xs-6">
+                        <label for="regCountry">Country<span class="text-danger">*</span></label>
+                        <select class="form-control" id="regCountry">
+                            <option value="" disabled="" selected="" hidden="">Please Select</option>
+                            <option value="US">United States</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-thin-12 col-xs-6">
+                        <label for="regAddress1">Street Address<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="regAddress1">
+                    </div>
+                    <div class="form-group col-thin-12 col-xs-6">
+                        <label for="regAddress2">Street Address Line 2</label>
+                        <input type="text" class="form-control" id="regAddress2">
+                    </div>
+                    <div class="form-group col-thin-12 col-xs-6">
+                        <label for="regCity">City<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="regCity">
+                    </div>
+                    <div class="form-group col-thin-12 col-xs-6">
+                        <label for="regState">State<span class="text-danger">*</span></label>
+                        <select class="form-control" id="regState">
+                            <option value="" disabled="" selected="" hidden="">Please Select</option>
+                            <option value="CA">California</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-thin-12 col-xs-6">
+                        <label for="regZip">Zip / Postal Code<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="regZip">
+                    </div>
+                    <div class="form-group col-thin-12 col-xs-6">
+                        <label for="regPhone">Phone<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="regPhone">
+                    </div>
+                    <div class="form-group col-thin-12 col-xs-6">
+                        <label for="regExt">Ext</label>
+                        <input type="text" class="form-control not-full-width" id="regExt" maxlength="5">
+                    </div>
+                </div>
+                <hr />
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> <span class="text-danger">*</span>I agree to the <a href="terms.html" target="_blank">terms and conditions</a> of SITECH Exchange. <!-- or content in a popup? -->
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-lg btn-brand">Register <span class="glyphicon glyphicon-chevron-right"></span></button>
+            </form>
         </div>
         <div id="pageloader"></div>
     </section>
