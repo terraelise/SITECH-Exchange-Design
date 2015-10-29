@@ -97,9 +97,12 @@
     });
 
     $(document).on("click", "[data-temptoggle=placeorder]", function () {
-        $("#checkoutBilling,.checkoutBillConfirm").collapse("hide");
-        $("#checkoutReceipt").collapse("show");
-        $("html, body").animate({ scrollTop: 0 }, "fast");
+        triggerLoader();
+        setTimeout(function () {
+            $("#checkoutBilling,.checkoutReceiptConfirm").collapse("hide");
+            $("#checkoutReceipt").collapse("show");
+            $("html, body").animate({ scrollTop: 0 }, "fast");
+        }, 3000);
     });
 
     $(document).on("click", "#paymentMethod1", function () {
