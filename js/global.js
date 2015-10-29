@@ -37,6 +37,79 @@
         $(".toggle-left").toggleClass("collapsed");
         $(".content-sides").toggleClass("show-left"); //also need to call these when something is selected to auto close
     });
+
+    //manual toggles for checkout, this is dumb-ish, need to rework during programming
+    $(document).on("click", "[data-temptoggle=account]", function () {
+        $("#checkoutAcct").collapse("hide");
+        $("#checkoutContact,.checkoutAcctConfirm").collapse("show");
+        $("html, body").animate({ scrollTop: 0 }, "fast");
+    });
+
+    $(document).on("click", "[data-temptoggle=contact]", function () {
+        $("#checkoutContact").collapse("hide");
+        $("#checkoutShip,.checkoutContactConfirm").collapse("show");
+        $("html, body").animate({ scrollTop: 0 }, "fast");
+    });
+    $(document).on("click", "[data-temptoggle=contactedit]", function () {
+        $(".checkoutContactEdit").removeClass("hide");
+        $(".checkoutContactStart").hide();
+        $("#checkoutContact").collapse("show");
+        $(".checkoutContactConfirm").collapse("hide");
+    });
+    $(document).on("click", "[data-temptoggle=contactsave]", function () {
+        $("#checkoutContact").collapse("hide");
+        $(".checkoutContactConfirm").collapse("show");
+        $("html, body").animate({ scrollTop: 0 }, "fast");
+    });
+
+    $(document).on("click", "[data-temptoggle=shipping]", function () {
+        $("#checkoutShip").collapse("hide");
+        $("#checkoutBilling,.checkoutShipConfirm").collapse("show");
+        $("html, body").animate({ scrollTop: 0 }, "fast");
+    });
+    $(document).on("click", "[data-temptoggle=shippingedit]", function () {
+        $(".checkoutShipEdit").removeClass("hide");
+        $(".checkoutShipStart").hide();
+        $("#checkoutShip").collapse("show");
+        $(".checkoutShipConfirm").collapse("hide");
+    });
+    $(document).on("click", "[data-temptoggle=shippingsave]", function () {
+        $("#checkoutShip").collapse("hide");
+        $(".checkoutShipConfirm").collapse("show");
+        $("html, body").animate({ scrollTop: 0 }, "fast");
+    });
+
+    $(document).on("click", "[data-temptoggle=billing]", function () {
+        $("#checkoutBilling").collapse("hide");
+        $("#checkoutReview,.checkoutBillConfirm").collapse("show");
+        $("html, body").animate({ scrollTop: 0 }, "fast");
+    });
+    $(document).on("click", "[data-temptoggle=billingedit]", function () {
+        $(".checkoutBillEdit").removeClass("hide");
+        $(".checkoutBillStart").hide();
+        $("#checkoutBilling").collapse("show");
+        $(".checkoutBillConfirm").collapse("hide");
+    });
+    $(document).on("click", "[data-temptoggle=billingsave]", function () {
+        $("#checkoutBill").collapse("hide");
+        $(".checkoutBillConfirm").collapse("show");
+        $("html, body").animate({ scrollTop: 0 }, "fast");
+    });
+
+    $(document).on("click", "[data-temptoggle=placeorder]", function () {
+        $("#checkoutBilling,.checkoutBillConfirm").collapse("hide");
+        $("#checkoutReceipt").collapse("show");
+        $("html, body").animate({ scrollTop: 0 }, "fast");
+    });
+
+    $(document).on("click", "#paymentMethod1", function () {
+        $("#paymentMethod1Content").collapse("show");
+        $("#paymentMethod2Content").collapse("hide");
+    });
+    $(document).on("click", "#paymentMethod2", function () {
+        $("#paymentMethod1Content").collapse("hide");
+        $("#paymentMethod2Content").collapse("show");
+    });
 });
 $(window).scroll(function () {
     var currScrollTop = $(window).scrollTop();

@@ -127,9 +127,452 @@
             </nav>
         </div>
     </header>
+
     <section id="mainContent" role="main">
         <div class="container-fluid">
-            Placeholder: Cart
+            <h1>Checkout</h1>
+            <div class="panel-group panel-brand" id="accordionCheckout" role="tablist" aria-multiselectable="true">
+                <div class="panel collapse in checkoutReceiptConfirm">
+                    <div class="panel-heading" role="tab">
+                        <h4>
+                            <span class="glyphicon glyphicon-ok text-success collapse checkoutAcctConfirm"></span>
+                            Account
+                        </h4>
+                    </div>
+                    <div class="panel-collapse collapse checkoutAcctConfirm" role="tabpanel">
+                        <div class="panel-body">
+                            Welcome Back, [NameHere]
+                        </div>
+                    </div>
+                    <div id="checkoutAcct" class="panel-collapse collapse in" role="tabpanel">
+                        <div class="panel-body">
+                            <div class="row even-columns-md">
+                                <div class="col-xs-12 col-md-6 card">
+                                    <h5>Proceed as a Guest</h5>
+                                    <p>Mauris diam lorem, porttitor eget lectus vitae, commodo posuere lectus. Nulla in est iaculis, consequat lectus eu, lobortis ligula. Phasellus lobortis turpis enim, eget congue est pretium vel.</p>
+                                    <button type="button" class="btn btn-lg" data-temptoggle="account">
+                                        Checkout As Guest <span class="glyphicon glyphicon-chevron-right"></span>
+                                    </button>
+                                </div>
+                                <div class="col-xs-12 col-md-6 card">
+                                    <h5>Log In to your SITECH Exchange Account</h5>
+                                    <p>Curabitur et eros faucibus, ullamcorper nisl sed, volutpat libero. Duis lobortis sem velit, et pellentesque odio interdum ac. Morbi non fringilla velit.</p>
+                                    <form>
+                                        <div class="row">
+                                            <div class="form-group col-thin-12 col-xs-6">
+                                                <label for="loginUser">Username</label>
+                                                <input type="text" class="form-control" id="loginUser">
+                                            </div>
+                                            <div class="form-group col-thin-12 col-xs-6">
+                                                <label for="loginPass">Password</label>
+                                                <input type="password" class="form-control" id="loginPass">
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-lg btn-brand" data-temptoggle="account">
+                                            Log In <span class="glyphicon glyphicon-chevron-right"></span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel collapse in checkoutReceiptConfirm">
+                    <div class="panel-heading" role="tab">
+                        <h4>
+                            <span class="glyphicon glyphicon-ok text-success collapse checkoutContactConfirm"></span>
+                            Contact Information
+                        </h4>
+                    </div>
+                    <div class="panel-collapse collapse checkoutContactConfirm" role="tabpanel">
+                        <div class="panel-body">
+                            <a data-temptoggle="contactedit">Edit Details</a>
+                        </div>
+                    </div>
+                    <div id="checkoutContact" class="panel-collapse collapse" role="tabpanel">
+                        <div class="panel-body">
+                            <p class="small">All fields marked with <span class="text-danger">*</span> are required. Thank you!</p>
+                            <hr />
+                            <form>
+                                <h5>Contact Details</h5>
+                                <div class="row">
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="conFirst">First Name<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="conFirst">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="conLast">Last Name<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="conLast">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="conEmail">Email<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="conEmail">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="conCompany">Company</label>
+                                        <input type="text" class="form-control" id="conCompany">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="conDepartment">Department</label>
+                                        <input type="text" class="form-control" id="conDepartment">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="conTitle">Title</label>
+                                        <input type="text" class="form-control" id="conTitle">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="conIndustry">Industry Type</label>
+                                        <select class="form-control" id="conIndustry">
+                                            <option value="" disabled="" selected="" hidden="">Please Select</option>
+                                            <option value="XX">??</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="conRefer">How did you hear about us?</label>
+                                        <select class="form-control" id="conRefer">
+                                            <option value="" disabled="" selected="" hidden="">Please Select</option>
+                                            <option value="XX">??</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <hr />
+                                <h5>Address</h5>
+                                <div class="row">
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="conCountry">Country<span class="text-danger">*</span></label>
+                                        <select class="form-control" id="conCountry">
+                                            <option value="" disabled="" selected="" hidden="">Please Select</option>
+                                            <option value="US">United States</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="conAddress1">Street Address<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="conAddress1">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="conAddress2">Street Address Line 2</label>
+                                        <input type="text" class="form-control" id="conAddress2">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="conCity">City<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="conCity">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="conState">State<span class="text-danger">*</span></label>
+                                        <select class="form-control" id="conState">
+                                            <option value="" disabled="" selected="" hidden="">Please Select</option>
+                                            <option value="CA">California</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="conZip">Zip / Postal Code<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="conZip">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="conPhone">Phone<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="conPhone">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="conExt">Ext</label>
+                                        <input type="text" class="form-control not-full-width" id="conExt" maxlength="5">
+                                    </div>
+                                </div>
+                                <hr />
+                                <b>Use this address for:</b>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> My Shipping Address
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> My Billing Address
+                                    </label>
+                                </div>
+                                <hr />
+                                <div class="checkoutContactStart">
+                                    <button type="button" class="btn btn-lg btn-brand" role="button" data-temptoggle="contact">
+                                        Continue <span class="glyphicon glyphicon-chevron-right"></span>
+                                    </button>
+                                </div>
+                                <div class="hide checkoutContactEdit">
+                                    <button type="button" class="btn btn-lg btn-brand" role="button" data-temptoggle="contactsave">
+                                        Save Changes <span class="glyphicon glyphicon-chevron-right"></span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel collapse in checkoutReceiptConfirm">
+                    <div class="panel-heading" role="tab">
+                        <h4>
+                            <span class="glyphicon glyphicon-ok text-success collapse checkoutShipConfirm"></span>
+                            Shipping Information
+                        </h4>
+                    </div>
+                    <div class="panel-collapse collapse checkoutShipConfirm" role="tabpanel">
+                        <div class="panel-body">
+                            <p>Shipping Method: Next Day $XX.XXX, Insured</p>
+                            <a data-temptoggle="shippingedit">Edit Details</a>
+                        </div>
+                    </div>
+                    <div id="checkoutShip" class="panel-collapse collapse" role="tabpanel">
+                        <div class="panel-body">
+                            <p class="small">All fields marked with <span class="text-danger">*</span> are required. Thank you!</p>
+                            <hr />
+                            <form>
+                                <h5>Shipping Address</h5>
+                                <div class="row">
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="shipFirst">First Name<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="shipFirst">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="shipLast">Last Name<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="shipLast">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="shipCountry">Country<span class="text-danger">*</span></label>
+                                        <select class="form-control" id="shipCountry">
+                                            <option value="" disabled="" selected="" hidden="">Please Select</option>
+                                            <option value="US">United States</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="shipAddress1">Street Address<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="shipAddress1">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="shipAddress2">Street Address Line 2</label>
+                                        <input type="text" class="form-control" id="shipAddress2">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="shipCity">City<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="shipCity">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="shipState">State<span class="text-danger">*</span></label>
+                                        <select class="form-control" id="shipState">
+                                            <option value="" disabled="" selected="" hidden="">Please Select</option>
+                                            <option value="CA">California</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="shipZip">Zip / Postal Code<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="shipZip">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="shipPhone">Phone<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="shipPhone">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="shipExt">Ext</label>
+                                        <input type="text" class="form-control not-full-width" id="shipExt" maxlength="5">
+                                    </div>
+                                </div>
+                                <hr />
+                                <b>Shipping Method</b>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="shipMethods" id="shipMethods1" value="shipMethods1"> Ground: $XX.XX
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="shipMethods" id="shipMethods1" value="shipMethods1"> Third Day: $XX.XX
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="shipMethods" id="shipMethods1" value="shipMethods1"> Second Day: $XX.XX
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="shipMethods" id="shipMethods1" value="shipMethods1"> Next Day: $XX.XX
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="shipMethods" id="shipMethods1" value="shipMethods1"> Pick Up
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <b>Insure Shipment</b><br />
+                                    <label>
+                                        <input type="checkbox"> Selecting to insure your shipment only covers the products within this order during the course of shipping them.
+                                    </label>
+                                </div>
+                                <hr />
+                                <div class="checkoutShipStart">
+                                    <button type="button" class="btn btn-lg btn-brand" role="button" data-temptoggle="shipping">
+                                        Continue <span class="glyphicon glyphicon-chevron-right"></span>
+                                    </button>
+                                </div>
+                                <div class="hide checkoutShipEdit">
+                                    <button type="button" class="btn btn-lg btn-brand" role="button" data-temptoggle="shippingsave">
+                                        Save Changes <span class="glyphicon glyphicon-chevron-right"></span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel collapse in checkoutReceiptConfirm">
+                    <div class="panel-heading" role="tab">
+                        <h4>
+                            <span class="glyphicon glyphicon-ok text-success collapse checkoutBillConfirm"></span>
+                            Billing Information
+                        </h4>
+                    </div>
+                    <div class="panel-collapse collapse checkoutBillConfirm" role="tabpanel">
+                        <div class="panel-body">
+                            <p>Payment Method: VISA ****XXXX</p>
+                            <a data-temptoggle="billingedit">Edit Details</a>
+                        </div>
+                    </div>
+                    <div id="checkoutBilling" class="panel-collapse collapse" role="tabpanel">
+                        <div class="panel-body">
+                            <p class="small">All fields marked with <span class="text-danger">*</span> are required. Thank you!</p>
+                            <hr />
+                            <form>
+                                <h5>Billing Address</h5>
+                                <div class="row">
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="billFirst">First Name<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="billFirst">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="billLast">Last Name<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="billLast">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="billCountry">Country<span class="text-danger">*</span></label>
+                                        <select class="form-control" id="billCountry">
+                                            <option value="" disabled="" selected="" hidden="">Please Select</option>
+                                            <option value="US">United States</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="billAddress1">Street Address<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="billAddress1">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="billAddress2">Street Address Line 2</label>
+                                        <input type="text" class="form-control" id="billAddress2">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="billCity">City<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="billCity">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="billState">State<span class="text-danger">*</span></label>
+                                        <select class="form-control" id="billState">
+                                            <option value="" disabled="" selected="" hidden="">Please Select</option>
+                                            <option value="CA">California</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="billZip">Zip / Postal Code<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="billZip">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="billPhone">Phone<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="billPhone">
+                                    </div>
+                                    <div class="form-group col-thin-12 col-xs-6">
+                                        <label for="billExt">Ext</label>
+                                        <input type="text" class="form-control not-full-width" id="billExt" maxlength="5">
+                                    </div>
+                                </div>
+                                <hr />
+                                <h5>Payment Information</h5>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="paymentMethod" id="paymentMethod1" value="paymentMethod1" checked> <img src="images/cc-amex.png" /> <img src="images/cc-visa.png" /> <img src="images/cc-mastercard.png" /> <img src="images/cc-discover.png" />
+                                    </label>
+                                </div>
+                                <div class="collapse in" id="paymentMethod1Content">
+                                    <div class="form-group">
+                                        <label for="billCard">Credit Card Number<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="billCard">
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-thin-12 col-xs-4">
+                                            <label for="billMo">Exp. Month<span class="text-danger">*</span></label>
+                                            <select class="form-control" id="billMo">
+                                                <option value="" disabled="" selected="" hidden="">Please Select</option>
+                                                <option value="01">01 January</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-thin-12 col-xs-4">
+                                            <label for="billYear">Exp. Year<span class="text-danger">*</span></label>
+                                            <select class="form-control" id="billYear">
+                                                <option value="" disabled="" selected="" hidden="">Please Select</option>
+                                                <option value="20XX">20XX</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-thin-12 col-xs-4">
+                                            <label for="billCode">Security Code<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control not-full-width" id="billCode" maxlength="5">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="billCardname">Cardholder Name<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="billCardname">
+                                    </div>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="paymentMethod" id="paymentMethod2" value="paymentMethod2"> <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/pp-acceptance-medium.png" class="paypal-logo" alt="Buy with PayPal">
+                                    </label>
+                                </div>
+                                <div class="collapse" id="paymentMethod2Content">
+                                    <p>Message about how paypal will work / redirect to their site after review / etc.</p>
+                                </div>
+                                <hr />
+                                <div class="checkoutBillStart">
+                                    <button type="button" class="btn btn-lg btn-brand" role="button" data-temptoggle="billing">
+                                        Continue <span class="glyphicon glyphicon-chevron-right"></span>
+                                    </button>
+                                </div>
+                                <div class="hide checkoutBillEdit">
+                                    <button type="button" class="btn btn-lg btn-brand" role="button" data-temptoggle="billingsave">
+                                        Save Changes <span class="glyphicon glyphicon-chevron-right"></span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel collapse in checkoutReceiptConfirm">
+                    <div class="panel-heading" role="tab">
+                        <h4>
+                            Review and Confirm
+                        </h4>
+                    </div>
+                    <div id="checkoutReview" class="panel-collapse collapse" role="tabpanel">
+                        <div class="panel-body">
+                            <button type="button" class="btn btn-lg btn-brand" role="button" data-temptoggle="placeorder">
+                                Submit Order <span class="glyphicon glyphicon-chevron-right"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-heading" role="tab">
+                        <h4>
+                            Receipt
+                        </h4>
+                    </div>
+                    <div id="checkoutReceipt" class="panel-collapse collapse" role="tabpanel">
+                        <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="pageloader"></div>
     </section>

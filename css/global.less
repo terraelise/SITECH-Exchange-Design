@@ -30,6 +30,7 @@ html, body {
     .transition(all @ani-duration);
 }
 a {
+    cursor: pointer;
     color: @brand-blue;
     text-decoration: none;
     .transition(all @ani-duration);
@@ -55,6 +56,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     + p, + div {
         margin-top: @general-padding;
+    }
+    + .radio, + .checkbox {
+        padding-top: 10px;
     }
 }
 h1 {
@@ -141,6 +145,16 @@ label {
 textarea {
     resize: none;
 }
+.radio, .checkbox {
+    + div {
+        padding-top: 5px;
+    }
+}
+div {
+    + .radio, + .checkbox {
+        padding-top: 5px;
+    }
+}
 .btn {
     display: inline-block;
     padding: 0 10px;
@@ -199,6 +213,12 @@ a, .btn {
         }
         .glyphicon-chevron-left {
             .transform(translateX(-3px));
+        }
+        .glyphicon-chevron-up {
+            .transform(translateY(-3px));
+        }
+        .glyphicon-chevron-down {
+            .transform(translateY(3px));
         }
     }
 }
@@ -590,6 +610,33 @@ a, .btn {
     }
 }
 
+.panel-brand {
+    .panel {
+        border: 0;
+        border-radius: 0;
+        .boxshadow(none);
+    }
+    .panel-heading {
+        padding: 10px 0 0 0;
+        border-bottom-width: 0;
+        border-top: 1px solid @color-grey;
+        border-radius: 0;
+        h4 {
+            margin: 0;
+            .collapse.in {
+                display: inline-block;
+            }
+        }
+        .panel-body {
+            margin-top: 0 !important;
+        }
+    }
+    .panel-body {
+        border: 0 !important;
+        border-radius: 0;
+    }
+}
+
 // specialty modifiers
 .pagination-wrap {
     text-align: center;
@@ -645,8 +692,17 @@ a, .btn {
         }
     }
 }
+
 .float-wrap {
     overflow: hidden;
+}
+
+.card {
+    + .card {
+        padding-top: @general-padding;
+        margin-top: @general-padding;
+        border-top: 2px solid @color-grey;
+    }
 }
 
 // mini grid
@@ -677,6 +733,25 @@ a, .btn {
     }
     .text-right-md {
         text-align: right;
+    }
+}
+@media @min-md {
+    .even-columns-md {
+        display: table;
+        &::before, &::after {
+            display: none;
+        }
+        > div {
+            display: table-cell;
+            float: none;
+            + .card {
+                padding-top: 0;
+                margin-top: 0;
+                border-top: 0;
+                padding-left: (@general-padding * 2);
+                border-left: 2px solid @color-grey;
+            }
+        }
     }
 }
 @media @max-md and @min-small {
