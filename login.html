@@ -101,7 +101,7 @@
             <div class="navbar-bottom hidden-xs text-light">
                 <div class="container-fluid">
                     <div class="pull-right">
-                        <a href="index.html">Home</a> / <a href="customer.html">Account</a> / Orders
+                        <a href="index.html">Home</a> / Log In
                     </div>
                     Pre-Owned Sitech Products
                 </div>
@@ -130,7 +130,30 @@
     </header>
     <section id="mainContent" role="main">
         <div class="container-fluid">
-            Placeholder: Customer Order History
+            <h5>Log In to your SITECH Exchange Account</h5>
+            <p>Curabitur et eros faucibus, ullamcorper nisl sed, volutpat libero. Duis lobortis sem velit, et pellentesque odio interdum ac. Morbi non fringilla velit.</p>
+            <form id="loginform">
+                <div class="row">
+                    <div class="col-thin-12 col-xs-6">
+                        <div class="form-group">
+                            <label for="loginUser">Username</label>
+                            <input type="text" class="form-control" id="loginUser">
+                            <span class="help-block" style="display:none;">Error validation message for this field would go here.</span><!-- these don't need to be here, can append, just for show -->
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPass">Password</label>
+                            <input type="password" class="form-control" id="loginPass">
+                            <span class="help-block" style="display:none;">Error validation message for this field would go here.</span><!-- these don't need to be here, can append, just for show -->
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-lg btn-brand">
+                    Log In <span class="glyphicon glyphicon-chevron-right"></span>
+                </button>
+            </form>
+            <br />
+            <p><span class="glyphicon glyphicon-chevron-right"></span> <a href="login-forgot.html">Forgot Your Username or Password?</a></p>
+            <p><span class="glyphicon glyphicon-chevron-right"></span> <a href="register.html">Register A New Account</a></p>
         </div>
         <div id="pageloader"></div>
     </section>

@@ -101,7 +101,7 @@
             <div class="navbar-bottom hidden-xs text-light">
                 <div class="container-fluid">
                     <div class="pull-right">
-                        <a href="index.html">Home</a> / <a href="customer.html">Account</a> / Orders
+                        <a href="index.html">Home</a> / <a href="login.html">Log In</a> / Forgot
                     </div>
                     Pre-Owned Sitech Products
                 </div>
@@ -130,7 +130,40 @@
     </header>
     <section id="mainContent" role="main">
         <div class="container-fluid">
-            Placeholder: Customer Order History
+            <h5>Having problems logging in to your SITECH Exchange Account?</h5>
+            <p>Enter your account username below to have your password reset.</p>
+            <form id="forgotpassword">
+                <div class="row">
+                    <div class="col-thin-12 col-xs-6">
+                        <div class="form-group">
+                            <label for="loginUser">Account Username</label>
+                            <input type="text" class="form-control" id="forgotUsername">
+                        </div>
+                        <p class="text-success" style="display:none;"><span class="glyphicon glyphicon-ok text-success"></span> Please check your email for instructions on how to reset your password.</p>
+                        <button type="submit" class="btn btn-lg btn-brand">
+                            Reset Password <span class="glyphicon glyphicon-chevron-right"></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <hr />
+            <p>If you cannot remember your username, enter your account email address to have your username emailed to you.</p>
+            <form id="forgotusername">
+                <div class="row">
+                    <div class="col-thin-12 col-xs-6">
+                        <div class="form-group">
+                            <label for="loginUser">Email Address</label>
+                            <input type="text" class="form-control" id="forgotEmail">
+                        </div>
+                        <p class="text-success" style="display:none;"><span class="glyphicon glyphicon-ok text-success"></span> Please check your email for your account Username.</p>
+                        <button type="submit" class="btn btn-lg btn-brand">
+                            Find Username <span class="glyphicon glyphicon-chevron-right"></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <br />
+            <p><span class="glyphicon glyphicon-chevron-right"></span> <a href="register.html">Register A New Account</a></p>
         </div>
         <div id="pageloader"></div>
     </section>

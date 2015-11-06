@@ -51,6 +51,42 @@
         }, 3000);
         return false;
     });
+    $(document).on("submit", "#loginform", function (e) {
+        $(this).find("button").blur();
+        e.preventDefault();
+        triggerLoader();
+        //faux errors if not shown first - this is all fake, don't use
+        if ($(this).find(".has-error").length < 1) {
+            var thisForm = $(this);
+            setTimeout(function () {
+                thisForm.find(".form-group").addClass("has-error");
+                thisForm.find(".help-block").show();
+            }, 3000);
+        } else {
+            setTimeout(function () {
+                document.location = "index.html";
+            }, 3000);
+        }
+        return false;
+    });
+    $(document).on("submit", "#forgotpassword", function (e) {
+        $(this).find("button").blur();
+        e.preventDefault();
+        triggerLoader();
+        setTimeout(function () {
+            $("#forgotpassword .text-success").show();
+        }, 3000);
+        return false;
+    });
+    $(document).on("submit", "#forgotusername", function (e) {
+        $(this).find("button").blur();
+        e.preventDefault();
+        triggerLoader();
+        setTimeout(function () {
+            $("#forgotusername .text-success").show();
+        }, 3000);
+        return false;
+    });
     $(document).on("click", ".toggle-left", function () {
         $(this).blur();
         $(".toggle-left").toggleClass("collapsed");
