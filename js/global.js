@@ -87,6 +87,23 @@
         }, 3000);
         return false;
     });
+    $(document).on("submit", "#registration", function (e) {
+        $(this).find("button").blur();
+        e.preventDefault();
+        triggerLoader();
+        //faux errors if not shown first - this is all fake, don't use
+        if ($(this).find(".has-error").length < 1) {
+            var thisForm = $(this);
+            setTimeout(function () {
+                thisForm.find(".help-block").show().parent().addClass("has-error");
+            }, 3000);
+        } else {
+            setTimeout(function () {
+                document.location = "customer.html";
+            }, 3000);
+        }
+        return false;
+    });
     $(document).on("click", ".toggle-left", function () {
         $(this).blur();
         $(".toggle-left").toggleClass("collapsed");

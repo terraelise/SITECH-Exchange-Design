@@ -134,78 +134,140 @@
             <p>Mauris diam lorem, porttitor eget lectus vitae, commodo posuere lectus. Nulla in est iaculis, consequat lectus eu, lobortis ligula. Phasellus lobortis turpis enim, eget congue est pretium vel. Integer eu orci a libero ullamcorper ullamcorper sed sed nibh. Mauris ultrices eros vel nisl vehicula laoreet. Curabitur et eros faucibus, ullamcorper nisl sed, volutpat libero. Duis lobortis sem velit, et pellentesque odio interdum ac. Morbi non fringilla velit.</p>
             <p class="small">All fields marked with <span class="text-danger">*</span> are required. Thank you!</p>
             <hr />
-            <form>
+            <form id="registration">
                 <h3>Contact Details</h3>
-                <div class="form-group">
-                    <label for="regOrganization">Organization Name</label>
-                    <input type="text" class="form-control" id="regOrganization">
+                <div class="row">
+                    <div class="col-thin-12 col-xs-6">
+                        <div class="form-group">
+                            <label for="regFirst">First Name<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="regFirst">
+                        </div>
+                    </div>
+                    <div class="col-thin-12 col-xs-6">
+                        <div class="form-group">
+                            <label for="regLast">Last Name<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="regLast">
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="form-group col-thin-12 col-xs-6">
-                        <label for="regFirst">First Name<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="regFirst">
+                    <div class="col-thin-12 col-xs-6">
+                        <div class="form-group">
+                            <label for="regEmail">Email<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="regEmail">
+                            <span class="help-block" style="display:none;">Error validation message for this field would go here.</span><!-- these don't need to be here, can append, just for show -->
+                        </div>
                     </div>
-                    <div class="form-group col-thin-12 col-xs-6">
-                        <label for="regLast">Last Name<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="regLast">
+                </div>
+                <div class="row">
+                    <div class="col-thin-12 col-xs-6">
+                        <div class="form-group">
+                            <label for="regOrganization">Organization Name</label>
+                            <input type="text" class="form-control" id="regOrganization">
+                        </div>
                     </div>
-                    <div class="form-group col-thin-12 col-xs-6">
-                        <label for="regEmail">Email<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="regEmail">
+                    <div class="col-thin-12 col-xs-6">
+                        <div class="form-group">
+                            <label for="regDepartment">Department</label>
+                            <input type="text" class="form-control" id="regDepartment">
+                        </div>
                     </div>
-                    <div class="form-group col-thin-12 col-xs-6">
-                        <label for="regDepartment">Department</label>
-                        <input type="text" class="form-control" id="regDepartment">
+                </div>
+                <div class="row">
+                    <div class="col-thin-12 col-xs-6">
+                        <div class="form-group">
+                            <label for="regTitle">Title</label>
+                            <input type="text" class="form-control" id="regTitle">
+                        </div>
                     </div>
-                    <div class="form-group col-thin-12 col-xs-6">
-                        <label for="regTitle">Title</label>
-                        <input type="text" class="form-control" id="regTitle">
-                    </div>
-                    <div class="form-group col-thin-12 col-xs-6">
-                        <label for="regWebsite">Website</label>
-                        <input type="text" class="form-control" id="regWebsite">
+                    <div class="col-thin-12 col-xs-6">
+                        <div class="form-group">
+                            <label for="regWebsite">Website</label>
+                            <input type="text" class="form-control" id="regWebsite">
+                        </div>
                     </div>
                 </div>
                 <hr />
                 <h3>Mailing Address</h3>
                 <div class="row">
-                    <div class="form-group col-thin-12 col-xs-6">
-                        <label for="regCountry">Country<span class="text-danger">*</span></label>
-                        <select class="form-control" id="regCountry">
-                            <option value="" disabled="" selected="" hidden="">Please Select</option>
-                            <option value="US">United States</option>
-                        </select>
+                    <div class="col-thin-12 col-xs-6">
+                        <div class="form-group">
+                            <label for="regCountry">Country<span class="text-danger">*</span></label>
+                            <select class="form-control" id="regCountry">
+                                <option value="" disabled="" selected="" hidden="">Please Select</option>
+                                <option value="US">United States</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-group col-thin-12 col-xs-6">
-                        <label for="regAddress1">Street Address<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="regAddress1">
+                    <div class="col-thin-12 col-xs-6">
+                        <div class="form-group">
+                            <label for="regAddress1">Street Address<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="regAddress1">
+                        </div>
                     </div>
-                    <div class="form-group col-thin-12 col-xs-6">
-                        <label for="regAddress2">Street Address Line 2</label>
-                        <input type="text" class="form-control" id="regAddress2">
+                </div>
+                <div class="row">
+                    <div class="col-thin-12 col-xs-6">
+                        <div class="form-group">
+                            <label for="regAddress2">Street Address Line 2</label>
+                            <input type="text" class="form-control" id="regAddress2">
+                        </div>
                     </div>
-                    <div class="form-group col-thin-12 col-xs-6">
-                        <label for="regCity">City<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="regCity">
+                    <div class="col-thin-12 col-xs-6">
+                        <div class="form-group">
+                            <label for="regCity">City<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="regCity">
+                        </div>
                     </div>
-                    <div class="form-group col-thin-12 col-xs-6">
-                        <label for="regState">State<span class="text-danger">*</span></label>
-                        <select class="form-control" id="regState">
-                            <option value="" disabled="" selected="" hidden="">Please Select</option>
-                            <option value="CA">California</option>
-                        </select>
+                </div>
+                <div class="row">
+                    <div class="col-thin-12 col-xs-6">
+                        <div class="form-group">
+                            <label for="regState">State<span class="text-danger">*</span></label>
+                            <select class="form-control" id="regState">
+                                <option value="" disabled="" selected="" hidden="">Please Select</option>
+                                <option value="CA">California</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-group col-thin-12 col-xs-6">
-                        <label for="regZip">Zip / Postal Code<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="regZip">
+                    <div class="col-thin-12 col-xs-6">
+                        <div class="form-group">
+                            <label for="regZip">Zip / Postal Code<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="regZip">
+                        </div>
                     </div>
-                    <div class="form-group col-thin-12 col-xs-6">
-                        <label for="regPhone">Phone<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="regPhone">
+                </div>
+                <div class="row">
+                    <div class="col-thin-12 col-xs-6">
+                        <div class="form-group">
+                            <label for="regPhone">Phone<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="regPhone">
+                            <span class="help-block" style="display:none;">Error validation message for this field would go here.</span><!-- these don't need to be here, can append, just for show -->
+                        </div>
                     </div>
-                    <div class="form-group col-thin-12 col-xs-6">
-                        <label for="regExt">Ext</label>
-                        <input type="text" class="form-control not-full-width" id="regExt" maxlength="5">
+                    <div class="col-thin-12 col-xs-6">
+                        <div class="form-group">
+                            <label for="regExt">Ext</label>
+                            <input type="text" class="form-control not-full-width" id="regExt" maxlength="5">
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <h3>Account Log In</h3>
+                <div class="row">
+                    <div class="col-thin-12 col-xs-6">
+                        <div class="form-group">
+                            <label for="regFirst">Username<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="regUser">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-thin-12 col-xs-6">
+                        <div class="form-group">
+                            <label for="regLast">Password<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="regPass">
+                        </div>
                     </div>
                 </div>
                 <hr />
