@@ -206,19 +206,21 @@ div {
         background-color: @color-gold;
     }
 }
-a, .btn {
-    &:hover, &:focus {
-        .glyphicon-chevron-right {
-            .transform(translateX(3px));
-        }
-        .glyphicon-chevron-left {
-            .transform(translateX(-3px));
-        }
-        .glyphicon-chevron-up {
-            .transform(translateY(-3px));
-        }
-        .glyphicon-chevron-down {
-            .transform(translateY(3px));
+.allowhover {
+    a, .btn {
+        &:hover, &:focus {
+            .glyphicon-chevron-right {
+                .transform(translateX(3px));
+            }
+            .glyphicon-chevron-left {
+                .transform(translateX(-3px));
+            }
+            .glyphicon-chevron-up {
+                .transform(translateY(-3px));
+            }
+            .glyphicon-chevron-down {
+                .transform(translateY(3px));
+            }
         }
     }
 }
@@ -368,10 +370,12 @@ a, .btn {
             .opacity(1);
         }
     }
-    &:hover, &:focus {
-        color: @brand-orange;
-        .icon-bar {
-            background-color: @brand-orange;
+    .allowhover & {
+        &:hover, &:focus {
+            color: @brand-orange;
+            .icon-bar {
+                background-color: @brand-orange;
+            }
         }
     }
 }
@@ -506,7 +510,14 @@ a, .btn {
         }
     }
     .checkbox, .radio {
-        margin: 5px 0;
+        padding: 0;
+        margin: 10px 0 0 0;
+        + .checkbox, + .radio {
+            margin-top: 0;
+        }
+        input[type=checkbox], input[type=radio] {
+            margin-top: 1px;
+        }
     }
 }
 .content-right {
@@ -584,13 +595,13 @@ a, .btn {
 .icon-list {
     a {
         display: block;
-        height: 140px;
-        padding: 10px;
-        border: 1px solid @color-white;
-        font-size: 90%;
+        padding: @general-padding 0;
+        text-transform: uppercase;
+        @media @max-thin {
+            font-size: 80%;
+        }
         span {
             display: block;
-            height: 60px;
             margin-bottom: 10px;
             .opacity(0.8);
             .transition(all @ani-duration);
@@ -600,10 +611,9 @@ a, .btn {
             }
         }
         &:hover, &:focus {
-            border-color: @brand-blue;
             color: @color-brown;
             text-decoration: none;
-            span {
+            .allowhover & span {
                 .opacity(1);
             }
         }

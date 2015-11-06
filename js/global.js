@@ -1,4 +1,23 @@
 ﻿$(document).ready(function () {
+    FastClick.attach(document.body);
+
+    //one-off feature detection - giant menu hover not wanted on touch screen click
+    var isTouch = "ontouchstart" in window || (window.DocumentTouch && document instanceof DocumentTouch) || navigator.msMaxTouchPoints > 0 || navigator.MaxTouchPoints > 0;
+    if (!isTouch) {
+        //allow hovers on non-touch only so they don't get 'stuck' on touch devices + other fixes as needed
+        $("body").addClass("allowhover");
+    }
+    //double check for a mouse just in case of false positives and multi-use devices, and still allow hover events
+    function detectMouse(e) {
+        if (e.type === "mousemove") {
+            isTouch = false;
+            $("body").addClass("allowhover");
+        }
+        $("body").off("mousemove touchstart", detectMouse);
+    }
+    $("body").on("mousemove touchstart", detectMouse);
+
+
     $(document).on("click", ".navbar-toggle", function() {
         $(this).blur();
     });
