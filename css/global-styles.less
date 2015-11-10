@@ -1,0 +1,239 @@
+html {
+   -ms-overflow-style: scrollbar; // keep scroll bar always on so it doesn't cover actions, stupid IE
+}
+// bootstrap overrides and theme styling
+html, body {
+    position: relative;
+    height: 100%;
+    background-color: @brand-blue;
+    font-family: @font-standard;
+    color: @brand-font;
+    font-size: 15px;
+    line-height: 1.4;
+    @media @min-small {
+        font-size: 16px;
+    }
+}
+.condensed {
+    font-family: @font-condensed;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.glyphicon {
+    vertical-align: middle;
+    top: -0.1em;
+    .transition(all @ani-duration);
+}
+a {
+    cursor: pointer;
+    color: @brand-blue;
+    text-decoration: none;
+    .transition(all @ani-duration);
+    &:hover, &:focus {
+        color: @brand-blue;
+        text-decoration: underline;
+    }
+    &.boxed {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 3px 7px;
+        background-color: lighten(@color-grey,10%);
+        border-radius: 2px;
+        white-space: nowrap;
+        &:hover, &:focus {
+            text-decoration: none;
+            background-color: @color-grey;
+        }
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 5px 0;
+    font-weight: 400;
+    + p, + div {
+        margin-top: @general-padding;
+    }
+    + .radio, + .checkbox {
+        padding-top: 10px;
+    }
+}
+h1 {
+    font-size: 200%;
+}
+h2 {
+    font-size: 180%;
+}
+h3 {
+    font-size: 160%;
+}
+h4 {
+    font-size: 140%;
+}
+h5 {
+    font-size: 120%;
+}
+h6 {
+    font-size: 105%;
+    font-weight: 700;
+}
+p {
+    margin-bottom: @general-padding;
+    &.margin-top {
+        margin-top: @general-padding;
+    }
+    small &, .small &, &.small {
+        margin-bottom: 7px;
+    }
+    + h4, + h5 {
+        margin-top: 20px;
+    }
+}
+ol, ul {
+    margin-bottom: @general-padding;
+}
+b, strong {
+    font-weight: 700;
+}
+sup, sub {
+    font-weight: 400;
+}
+small, .small {
+    font-size: 90%;
+}
+.large {
+    font-size: 110%;
+}
+.xlarge {
+    font-size: 160%;
+}
+.text-info {
+    color: @color-brown;
+}
+.text-danger {
+    color: @color-red;
+}
+.text-warning {
+    color: @color-gold;
+}
+label {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 85%;
+}
+.form-control {
+    padding: 6px 10px;
+    .boxshadow(none);
+    select& {
+        padding: 6px 8px;
+        &.input-sm, .form-group-sm & {
+            padding: 0 6px;
+        }
+    }
+    &.input-sm, .form-group-sm & {
+        padding: 0 8px;
+        height: 25px;
+        line-height: 25px;
+    }
+    &.not-full-width {
+        width: auto;
+    }
+}
+textarea {
+    resize: none;
+}
+.radio, .checkbox {
+    + div {
+        padding-top: 5px;
+    }
+}
+div {
+    + .radio, + .checkbox {
+        padding-top: 5px;
+    }
+}
+.btn {
+    display: inline-block;
+    padding: 0 10px;
+    border: 0;
+    min-height: 34px;
+    line-height: 34px; // height of form-control
+    text-decoration: none;
+    .condensed();
+    .transition(all @ani-duration);
+    background-color: lighten(@color-grey,10%);
+    &:hover, &:focus {
+        text-decoration: none;
+        background-color: @color-grey;
+    }
+    &.btn-sm, .form-group-sm & {
+        min-height: 25px;
+        font-size: 14px;
+        line-height: 25px;
+    }
+    .btn-bars {
+        display: inline-block;
+        position: relative;
+        top: 5px;
+        width: 25px;
+        height: 20px;
+    }
+    .input-group-btn:last-child & {
+        border-left: 1px solid #CCC;
+    }
+    .input-group-btn:first-child & {
+        border-right: 1px solid #CCC;
+    }
+    .badge {
+        margin-left: 10px;
+        background-color: @brand-font;
+    }
+    p & {
+        margin: 5px 5px 0 0;
+    }
+}
+.btn-brand {
+    background-color: @brand-orange;
+    color: @color-white;
+    &:hover, &:focus {
+        background-color: @color-gold;
+        color: @color-white;
+    }
+    .badge {
+        background-color: @color-gold;
+    }
+}
+.allowhover {
+    a, .btn {
+        &:hover, &:focus {
+            .glyphicon-chevron-right {
+                .transform(translateX(3px));
+            }
+            .glyphicon-chevron-left {
+                .transform(translateX(-3px));
+            }
+            .glyphicon-chevron-up {
+                .transform(translateY(-3px));
+            }
+            .glyphicon-chevron-down {
+                .transform(translateY(3px));
+            }
+        }
+    }
+}
+.text-reverse {
+    color: @color-white;
+    a {
+        color: @color-grey;
+        &:hover, &:focus {
+            color: @brand-orange;
+        }
+    }
+}
+.text-light {
+    color: @color-white;
+    a {
+        color: @color-white;
+        &:hover, &:focus {
+            color: @color-yellow;
+        }
+    }
+}

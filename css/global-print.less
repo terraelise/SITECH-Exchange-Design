@@ -1,0 +1,14 @@
+.print-only {
+    display: none;
+}
+@media print {
+    #mainHeader {
+        height: auto;
+    }
+    #mainHeader .navbar, #mainFooter, .btn-totop {
+        display: none;
+    }
+    .print-only {
+        display: block;
+    }
+}

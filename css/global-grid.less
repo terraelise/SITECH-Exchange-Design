@@ -1,0 +1,104 @@
+.visible-thin-block, .visible-thin-inline, .visible-thin-inline-block {
+    display: none;
+}
+@media @min-thin {
+    .pull-right-sm {
+        float: right;
+        margin-left: @general-padding;
+    }
+    .pull-left-sm {
+        float: left;
+        margin-right: @general-padding;
+    }
+    .text-right-sm {
+        text-align: right;
+    }
+}
+@media @min-small {
+    .pull-right-md {
+        float: right;
+        margin-left: @general-padding;
+    }
+    .pull-left-md {
+        float: left;
+        margin-right: @general-padding;
+    }
+    .text-right-md {
+        text-align: right;
+    }
+}
+@media @min-md {
+    .even-columns-md {
+        display: table;
+        &::before, &::after {
+            display: none;
+        }
+        > div {
+            display: table-cell;
+            float: none;
+            + .card {
+                padding-top: 0;
+                margin-top: 0;
+                border-top: 0;
+                padding-left: (@general-padding * 2);
+                border-left: 2px solid @color-grey;
+            }
+        }
+    }
+}
+@media @max-md and @min-small {
+    .col-sm-6:nth-child(odd) {
+        clear: both;
+    }
+    .col-sm-4:nth-child(4n) {
+        clear: both;
+    }
+    .col-sm-3:nth-child(5n) {
+        clear: both;
+    }
+    .col-sm-2:nth-child(7n) {
+        clear: both;
+    }
+}
+@media @max-small and @min-thin {
+    .col-xs-6:nth-child(odd) {
+        clear: both;
+    }
+    .col-xs-4:nth-child(4n) {
+        clear: both;
+    }
+    .col-xs-3:nth-child(5n) {
+        clear: both;
+    }
+    .col-xs-2:nth-child(7n) {
+        clear: both;
+    }
+}
+@media @max-thin {
+    .hidden-thin {
+        display: none !important;
+    }
+    .visible-thin-block {
+        display: block !important;
+    }
+    .visible-thin-inline {
+        display: inline !important;
+    }
+    .visible-thin-inline-block {
+        display: inline-block !important;
+    }
+    .no-push-pull-thin {
+        left: auto;
+        right: auto;
+    }
+    .col-thin-12 {
+        width: 100%;
+    }
+    .col-thin-6 {
+        float: left;
+        width: 50%;
+        &:nth-child(odd) {
+            clear: both;
+        }
+    }
+}

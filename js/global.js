@@ -51,6 +51,28 @@
         }, 3000);
         return false;
     });
+
+
+   //catch clicks to add to watch list - temp data attribute (don't really use) - prevent the click from going to watch page, change html, and then remove data attribute to allow click to watch page next time
+    $(document).on("click", "[data-tempfunc=watch]", function (e) {
+        $(this).blur();
+        e.preventDefault();
+        triggerLoader();
+        var that = $(this);
+        setTimeout(function () {
+            that.html("On Watched List").removeAttr("data-tempfunc");
+        }, 3000);
+    });
+    $(document).on("click", "[data-tempfunc=watchbtn]", function (e) {
+        $(this).blur();
+        e.preventDefault();
+        triggerLoader();
+        var that = $(this);
+        setTimeout(function () {
+            that.html('<span class="glyphicon glyphicon-ok text-success"></span> Watched').removeAttr("data-tempfunc");
+        }, 3000);
+    });
+
     $(document).on("submit", "#loginform", function (e) {
         $(this).find("button").blur();
         e.preventDefault();

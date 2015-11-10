@@ -904,6 +904,10 @@ p .btn {
   .visible-thin-inline-block {
     display: inline-block !important;
   }
+  .no-push-pull-thin {
+    left: auto;
+    right: auto;
+  }
   .col-thin-12 {
     width: 100%;
   }
@@ -913,6 +917,22 @@ p .btn {
   }
   .col-thin-6:nth-child(odd) {
     clear: both;
+  }
+}
+.print-only {
+  display: none;
+}
+@media print {
+  #mainHeader {
+    height: auto;
+  }
+  #mainHeader .navbar,
+  #mainFooter,
+  .btn-totop {
+    display: none;
+  }
+  .print-only {
+    display: block;
   }
 }
 /*# sourceMappingURL=global.css.map */

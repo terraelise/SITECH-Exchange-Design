@@ -1,0 +1,187 @@
+//specialty content
+.search-results {
+    @media @max-thin {
+        font-size: 80%;
+        p {
+            margin-bottom: 8px;
+        }
+        .col-xs-3 {
+            padding-right: 0;
+        }
+    }
+}
+.search-filters {
+    > span {
+        display: inline-block;
+        padding: 5px 10px 0 0;
+        &:last-of-type {
+            padding-right: 0;
+        }
+    }
+}
+
+.cart-list {
+    @media @max-thin {
+        font-size: 90%;
+        .col-xs-3 {
+            padding-right: 0;
+        }
+    }
+}
+
+.featured-listing {
+    padding: @general-padding (@general-padding * 2) @general-padding @general-padding;
+    background-color: @brand-blue;
+    > .row > div {
+        margin-top: @general-padding;
+        padding-right: 0;
+    }
+    .featured-content {
+        background-color: @color-white;
+    }
+    .table-wrap {
+        height: 120px; //if title is too long it will be taller than it's neighbor, this height is a best guess to fit most
+    }
+    .table-cell {
+        padding: 0 10px;
+    }
+    .featured-image {
+        display: block;
+        height: 120px;
+        border-bottom: 1px solid @brand-blue;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    .featured-price {
+        padding: 5px;
+        background-color: @color-grey;
+        border-top: 1px solid @brand-blue;
+    }
+    @media @max-thin {
+        font-size: 85%;
+    }
+}
+
+.icon-list {
+    a {
+        display: block;
+        padding: @general-padding 0;
+        text-transform: uppercase;
+        @media @max-thin {
+            font-size: 80%;
+        }
+        span {
+            display: block;
+            margin-bottom: 10px;
+            .opacity(0.8);
+            .transition(all @ani-duration);
+            img {
+                max-height: 100%;
+                margin: 0 auto;
+            }
+        }
+        &:hover, &:focus {
+            color: @color-brown;
+            text-decoration: none;
+            .allowhover & span {
+                .opacity(1);
+            }
+        }
+    }
+}
+
+.panel-brand {
+    .panel {
+        border: 0;
+        border-radius: 0;
+        .boxshadow(none);
+    }
+    .panel-heading {
+        padding: 10px 0 0 0;
+        border-bottom-width: 0;
+        border-top: 1px solid @color-grey;
+        border-radius: 0;
+        h4 {
+            margin: 0;
+            .collapse.in {
+                display: inline-block;
+            }
+        }
+        .panel-body {
+            margin-top: 0 !important;
+        }
+    }
+    .panel-body {
+        border: 0 !important;
+        border-radius: 0;
+    }
+}
+
+// specialty modifiers
+.pagination-wrap {
+    text-align: center;
+}
+.pagination {
+    margin: 0;
+    > li {
+        > a {
+            margin: 0 2px 0 0;
+            border-color: @color-grey;
+            &:hover, &:focus {
+                background-color: @color-grey;
+                border-color: @color-grey;
+            }
+        }
+        &.active > a {
+            background-color: @brand-orange;
+            border-color: @brand-orange;
+            &:hover, &:focus {
+                background-color: @brand-orange;
+                border-color: @brand-orange;
+            }
+        }
+    }
+}
+.table-wrap {
+    display: table;
+    width: 100%;
+    margin: 0;
+    &.not-full-width {
+        width: auto;
+    }
+    &.fixed {
+        table-layout: fixed;
+    }
+    .table-row {
+        display: table-row;
+    }
+    .table-cell {
+        display: table-cell;
+        vertical-align: middle;
+        &.full-width {
+            width: 100%;
+        }
+        .vertical-top& {
+            vertical-align: top;
+        }
+        &.padding-right {
+            padding-right: 10px;
+        }
+        &.padding-left {
+            padding-left: 10px;
+        }
+    }
+}
+
+.float-wrap {
+    overflow: hidden;
+}
+
+.card {
+    + .card {
+        padding-top: @general-padding;
+        margin-top: @general-padding;
+        border-top: 2px solid @color-grey;
+    }
+}
